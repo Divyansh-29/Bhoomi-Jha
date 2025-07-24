@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="home8-about">
-                        <img src="{{asset('assets/images/Random-Building.jpg')}}" alt="Bhoomija Envirocare">
+                        <img src="{{asset('assets/images/random-Building.jpg')}}" alt="Bhoomija Envirocare">
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                 <div class="col-lg-6 col-md-6 mb-50">
                     <div class="team-item text-center" style="background: #fff; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                         <div class="team-img mb-25">
-                            <img src="{{asset('assets/images/team/ashish-gupta.jpg')}}" alt="Ashish Kumar Gupta" style="width: 200px; height: 200px; border-radius: 30%; object-fit: cover; margin: 0 auto;">
+                            <img src="{{asset('assets/images/team/Ashish-gupta.jpg')}}" alt="Ashish Kumar Gupta" style="width: 200px; height: 200px; border-radius: 30%; object-fit: cover; margin: 0 auto;">
                         </div>
                         <div class="team-content">
                             <h4 class="team-name mb-5">Mr. Ashish Kumar Gupta</h4>
@@ -153,7 +153,7 @@
                 <div class="col-lg-6 col-md-6 mb-50">
                     <div class="team-item text-center" style="background: #fff; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                         <div class="team-img mb-25">
-                            <img src="{{asset('assets/images/team/kaunain-sidqui.jpg')}}" alt="Kaunain Sidqui" style="width: 200px; height: 200px; border-radius: 30%; object-fit: cover; margin: 0 auto;">
+                            <img src="{{asset('assets/images/team/Kaunain-sidqui.jpg')}}" alt="Kaunain Sidqui" style="width: 200px; height: 200px; border-radius: 30%; object-fit: cover; margin: 0 auto;">
                         </div>
                         <div class="team-content">
                             <h4 class="team-name mb-5">Mr. Kaunain Sidqui</h4>
