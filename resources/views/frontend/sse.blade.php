@@ -347,8 +347,8 @@
     margin: 0 auto;
 }
 
-/* Equal height for all cards */
-.row {
+/* Equal height for all cards - SCOPED TO SERVICES SECTION ONLY */
+.rs-services .row {
     display: flex;
     flex-wrap: wrap;
 }
@@ -358,7 +358,7 @@
 }
 
 @media (min-width: 992px) {
-    .row > [class*="col-"] {
+    .rs-services .row > [class*="col-"] {
         display: flex;
     }
 }

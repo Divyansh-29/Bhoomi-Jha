@@ -416,7 +416,7 @@ Version: 1.0.0
 	
 	/* Sub-menus - width */
 	.rs-menu ul ul a {
-		width: 260px;	/* <- Modify for width change */
+		width: 530px;	/* <- Modify for width change */
 	}
 
     .rs-header .menu-area.menu-sticky {

@@ -16,6 +16,12 @@ class FrontendController extends Controller
     public function contactus(){
         return view('frontend.contactus');
     }
+    public function clientele(){
+        return view('frontend.clientele');
+    }
+    public function career(){
+        return view('frontend.career');
+    }
     public function sse(){
         return view('frontend.sse');
     }
