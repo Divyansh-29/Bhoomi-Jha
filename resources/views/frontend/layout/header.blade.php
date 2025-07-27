@@ -10,7 +10,7 @@
                             <a href="{{route('home')}}"><img src="{{asset('assets/images/logo1.png')}}" alt="" width="60px"></a>
                         </div>
                     </div>
-                    <div class="col-lg-9 text-right">
+                    {{-- <div class="col-lg-9 text-right">
                         <ul class="rs-contact-info">
                             {{-- <li class="contact-part">
                                 <i class="flaticon-location"></i>
@@ -18,12 +18,12 @@
                                     <span>Corporate Office</span>
                                     {{env('SITEADDRESS')}}
                                 </span>
-                            </li> --}}
+                            </li>
                             <li class="contact-part">
                                 <i class="flaticon-email"></i>
                                 <span class="contact-info">
                                     <span>E-mail</span>
-                                    {{-- <a href="#">info@aplinka.in, darpan@aplinka.in</span></a> --}}
+                                    {{-- <a href="#">info@aplinka.in, darpan@aplinka.in</span></a>
                                     <a href="mailto:{{env('SITEEMAIL')}}">{{env('SITEEMAIL')}}</span></a>
                                 </span>
                             </li>
@@ -35,7 +35,7 @@
                                 </span>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -60,23 +60,41 @@
                         </div>
                         <nav class="rs-menu">   
                             <ul class="nav-menu"><li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home nav-item menu-item-37 nav-item"><a href="{{route('home')}}">Home</a></li>
-                                 <li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-60 nav-item"><a href="{{route('about-us')}}">About Us</a></li>
-                                 <li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-60 nav-item"><a href="{{route('sse')}}">SSE (as per QCI/NABET Sectors)</a></li>
+                                 <li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-54 nav-item"><a href="#">About Us</a>
+                                    <ul class="menu-item-has-children">
+                                        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-42 nav-item"><a href="{{route('about-us','about-bhoomija')}}">About Bhoomija</a></li>
+                                        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-44 nav-item"><a href="{{route('about-us','message-from-directors')}}">Message From Directors</a></li>
+                                        <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-39 nav-item"><a href="{{route('about-us','vision-mission-&-values')}}">Vision, Mission & Values</a></li>
+                                        <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-48 nav-item"><a href="{{ asset('assets/quality-policy.pdf') }}" target="_blank" rel="noopener noreferrer">Quality Policy</a></li>
+                                        <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-43 nav-item"><a href="{{route('about-us','key-professionals')}}">Key Professionals</a></li>
+                                    </ul>
+                                </li>
+                                  <li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-54 nav-item"><a href="#">Sectors as per QCI/NABET</a>
+                                    <ul class="menu-item-has-children">
+                                        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-42 nav-item"><a href="{{route('sse','mining-of-minerals')}}">Mining of Minerals</a></li>
+                                        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-44 nav-item"><a href="{{route('sse','thermal-power-plant')}}">Thermal Power Plant</a></li>
+                                        <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-39 nav-item"><a href="{{route('sse','coal-washeries')}}">Coal Washeries</a></li>
+                                        <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-48 nav-item"><a href="{{route('sse','mineral-benefication')}}">Mineral Benefication</a></li>
+                                        <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-43 nav-item"><a href="{{route('sse','metallurgical-industries')}}">Metallurgical Industries</a></li>
+                                        <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-48 nav-item"><a href="{{route('sse','cement-plants')}}">Cement Plants</a></li>
+                                        <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-43 nav-item"><a href="{{route('sse','building-&-construction-projects')}}">Building & Construction Projects</a></li>
+                                     </ul>
+                                 </li>
                                  <li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item menu-item-54 nav-item"><a href="#">Services</a>
-                                <ul class="menu-item-has-children">
-                                    <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-42 nav-item"><a href="{{route('service','environmental-impacts-assessment')}}">Environmental Impacts Assessment (EIA) Studies</a></li>
-                                    <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-44 nav-item"><a href="{{route('service','environmental-monitoring')}}">Environmental Monitoring</a></li>
-                                    <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-39 nav-item"><a href="{{route('service','environmental-audits')}}">Environmental Audits</a></li>
-                                    <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-48 nav-item"><a href="{{route('service','fc-wc')}}">Forest Clearance (FC), Wildlife Clearance (WC)</a></li>
-                                    <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-43 nav-item"><a href="{{route('service','consent-to-estalish-and-operate')}}">Consent to Estalish and Operate (SPBs)</a></li>
-                                    {{-- <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-40 nav-item"><a href="{{route('service','renewal-application')}}">CTE/CTO Renewal Application</a></li> --}}
-                                    <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-47 nav-item"><a href="{{route('service','six-monthly-compliance-report-preparation-for-ec-conditions')}}">Six Monthly Compliance Report Preparation For EC Conditions</a></li>
-                                    <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-42 nav-item"><a href="{{route('service','carbon-foot-print-&-climate-change-studies')}}">Carbon Foot Print & Climate Change Studies</a></li>
-                                    <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-44 nav-item"><a href="{{route('service','socio-economic-impact-assessment')}}">Socio-Economic Impact Assessment</a></li>
-                                    <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-39 nav-item"><a href="{{route('service','design-&-engineering-for-tech')}}">Design & Engineering for Tech MBBR, SBR, ASP, MBR, etc (STP, ETP & CPU etc)</a></li>
-                                    <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-48 nav-item"><a href="{{route('service','annual-environmental-statement')}}">Annual Environmental Statement (Form-V)</a></li>
-                                </ul>
-                            </li>
+                                    <ul class="menu-item-has-children">
+                                        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-42 nav-item"><a href="{{route('service','environmental-impacts-assessment')}}">Environmental Impacts Assessment (EIA) Studies</a></li>
+                                        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-44 nav-item"><a href="{{route('service','environmental-monitoring')}}">Environmental Monitoring</a></li>
+                                        <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-39 nav-item"><a href="{{route('service','environmental-audits')}}">Environmental Audits</a></li>
+                                        <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-48 nav-item"><a href="{{route('service','fc-wc')}}">Forest Clearance (FC), Wildlife Clearance (WC)</a></li>
+                                        <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-43 nav-item"><a href="{{route('service','consent-to-estalish-and-operate')}}">Consent to Estalish and Operate (SPBs)</a></li>
+                                        {{-- <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-40 nav-item"><a href="{{route('service','renewal-application')}}">CTE/CTO Renewal Application</a></li> --}}
+                                        <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-47 nav-item"><a href="{{route('service','six-monthly-compliance-report-preparation-for-ec-conditions')}}">Six Monthly Compliance Report Preparation For EC Conditions</a></li>
+                                        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-42 nav-item"><a href="{{route('service','carbon-foot-print-&-climate-change-studies')}}">Carbon Foot Print & Climate Change Studies</a></li>
+                                        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-44 nav-item"><a href="{{route('service','socio-economic-impact-assessment')}}">Socio-Economic Impact Assessment</a></li>
+                                        <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-39 nav-item"><a href="{{route('service','design-&-engineering-for-tech')}}">Design & Engineering for Tech MBBR, SBR, ASP, MBR, etc (STP, ETP & CPU etc)</a></li>
+                                        <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-48 nav-item"><a href="{{route('service','annual-environmental-statement')}}">Annual Environmental Statement (Form-V)</a></li>
+                                    </ul>
+                                </li>
                             <li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-61 nav-item"><a href="{{route('clientele')}}">Clientele</a></li>
                             <li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-61 nav-item"><a href="{{route('career')}}">Careers</a></li>
                             <li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-61 nav-item"><a href="{{route('contact-us')}}">Contact Us</a></li>
