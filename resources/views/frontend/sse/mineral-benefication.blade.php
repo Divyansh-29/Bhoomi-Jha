@@ -315,7 +315,7 @@
         </div>
         <hr>
         <!-- Counter Section Start -->
-        <div class="rs-contact-wrap bg5 pt-120 pb-390 md-pt-80" style="background: linear-gradient(rgb(0 24 24 / 84%) 100%, rgb(0 44 2) 100%), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat; background-size: cover;">
+        {{-- <div class="rs-contact-wrap bg5 pt-120 pb-390 md-pt-80" style="background: linear-gradient(rgb(0 24 24 / 84%) 100%, rgb(0 44 2) 100%), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat; background-size: cover;">
             <div class="container">
                 <div class="sec-title2 text-center mb-30">
                     <h2 class="title white-color">
@@ -323,10 +323,10 @@
                     </h2>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Counter Section End -->
         <!-- Video Section End -->
-        <div class="rs-video-wrap style2 inner pb-120 md-pb-80">
+        {{-- <div class="rs-video-wrap style2 inner pb-120 md-pb-80">
             <div class="container">
                 <div class="row margin-0 gray-color">
                     <div class="col-lg-6">
@@ -425,7 +425,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Video Section End -->
 <style>
 /* Custom styles for mineral beneficiation EC page - Reusing Coal Washery EC styles with minor adjustments */

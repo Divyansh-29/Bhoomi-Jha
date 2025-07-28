@@ -62,7 +62,7 @@
         background-color: #156e68; /* Use primary color for info box */
         color: white;
         padding: 40px 30px;
-        border-radius: 8px;
+        border-radius: 12px;
         height: 100%; /* Ensure full height */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
@@ -71,7 +71,7 @@
         margin-bottom: 30px;
     }
 
-    .sec-title .sub-text.new-text {
+    .sec-title .sub-text.style-bg {
         display: inline-block;
         padding: 5px 15px;
         background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
@@ -97,8 +97,6 @@
         margin-bottom: 25px;
     }
 
-    /* .address-icon removed as per request */
-
     .address-text {
         flex-grow: 1;
     }
@@ -118,6 +116,7 @@
         font-size: 1rem;
         line-height: 1.5;
         display: block;
+        margin: 0 0 5px 0; /* Add bottom margin for spacing between lines */
     }
 
     .address-text a:hover {
@@ -129,7 +128,7 @@
     .contact-widget {
         background-color: #ffffff;
         padding: 40px;
-        border-radius: 8px;
+        border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         height: 100%;
     }
@@ -265,8 +264,8 @@
         }
     }
 
-    /* Responsive Adjustments */
-    @media (max-width: 991px) {
+    /* Responsive Design */
+    @media (max-width: 1199px) {
         .rs-contact {
             padding: 60px 0;
         }
@@ -285,9 +284,50 @@
         }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
+        .col-lg-4, .col-lg-6, .col-lg-3 {
+            margin-bottom: 30px;
+        }
+
         .rs-contact {
             padding: 50px 0;
+        }
+
+        .contact-box,
+        .contact-widget {
+            padding: 25px 20px;
+        }
+
+        .sec-title .title {
+            font-size: 1.7rem;
+        }
+
+        .sec-title2 .title.testi-title {
+            font-size: 1.6rem;
+        }
+
+        .address-box {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .address-text .label {
+            margin-bottom: 8px;
+        }
+
+        .address-text a,
+        .address-text .desc {
+            margin-bottom: 10px;
+        }
+
+        .readon.learn-more.submit {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .rs-contact {
+            padding: 40px 0;
         }
 
         .breadcrumbs-inner h1.page-title {
@@ -308,22 +348,110 @@
 
         .contact-box,
         .contact-widget {
-            padding: 25px 20px;
+            padding: 20px 15px;
+            margin-bottom: 20px;
         }
 
-        .address-box {
-            flex-direction: column;
-            align-items: flex-start;
+        .address-text .label {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
         }
 
-        /* .address-icon {
-            margin-bottom: 10px;
-            margin-right: 0;
-        } */
+        .address-text a,
+        .address-text .desc {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            font-size: 0.9rem;
+            padding: 10px 12px;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+        }
 
         .readon.learn-more.submit {
-            width: 100%;
+            padding: 10px 25px;
+            font-size: 0.9rem;
         }
+    }
+
+    /* Enhanced section styling */
+    .sec-title .sub-text.style-bg {
+        color: #156e68;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+
+    .sec-title .title {
+        color: #333;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .sec-title .desc {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Equal height for all cards - SCOPED TO SERVICES SECTION ONLY */
+    .rs-services .row, .rs-about .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .h-100 {
+        height: 100%;
+    }
+
+    @media (min-width: 992px) {
+        .rs-services .row > [class*="col-"], .rs-about .row > [class*="col-"] {
+            display: flex;
+        }
+    }
+
+    /* Specific banner adjustment if needed */
+    .rs-breadcrumbs.img1 {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* Process Step Indicators */
+    .process-step-indicator {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #156e68, #aec944);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Benefits Section - Simplified without icons */
+    .services-item.d-flex.flex-column.align-items-center.text-center .services-content .title,
+    .services-item.d-flex.flex-column.align-items-center.text-center .services-content .desc {
+        text-align: center;
+    }
+
+    /* Ensure benefit cards also try to be equal height */
+    .rs-services.style2.gray-color .services-item {
+        height: 100%;
     }
 </style>
 
@@ -334,7 +462,7 @@
         <div class="breadcrumbs-inner">
             <h1 class="page-title">Contact</h1>
             <ul>
-                <li>
+                <li title="Bhoomija - Environmental Consultancy Services">
                     <a class="active" href="{{ route('home') }}">Home</a>
                 </li>
                 <li>Contact</li>
@@ -351,33 +479,29 @@
                 <div class="col-lg-5 md-mb-60">
                     <div class="contact-box">
                         <div class="sec-title">
-                            <span class="sub-text new-text">Let's Talk</span>
+                            <span class="sub-text style-bg">Let's Talk</span>
                             <h2 class="title">Speak With Us</h2>
-                            <!-- Optional: Add a brief intro text -->
-                            <!-- <p class="mt-3">We're here to assist you. Reach out using the information below or send us a message.</p> -->
+                            <p class="mt-3">We're here to assist you. Reach out to us using the information below or send us a message.</p>
                         </div>
                         <div class="address-box">
-                            <!-- <div class="address-icon">
-                                <i class="fa fa-phone"></i>
-                            </div> -->
                             <div class="address-text">
                                 <span class="label">Phone:</span>
-                                <a href="tel:{{ env('SITEPHONE') }}">{{ env('SITEPHONE') }}</a>
+                                @php
+                                    // Split the phone numbers from the .env variable (assuming comma separated)
+                                    $phoneNumbers = explode(',', env('SITEPHONE'));
+                                @endphp
+                                @foreach($phoneNumbers as $phoneNumber)
+                                    <a href="tel:{{ str_replace(['+', ' ', '-', '(', ')'], ['', '', '', '', ''], trim($phoneNumber)) }}">{{ trim($phoneNumber) }}</a>
+                                @endforeach
                             </div>
                         </div>
                         <div class="address-box">
-                            <!-- <div class="address-icon">
-                                <i class="fa fa-envelope"></i>
-                            </div> -->
                             <div class="address-text">
                                 <span class="label">Email:</span>
                                 <a href="mailto:{{ env('SITEEMAIL') }}">{{ env('SITEEMAIL') }}</a>
                             </div>
                         </div>
                         <div class="address-box">
-                            <!-- <div class="address-icon">
-                                <i class="fa fa-map-marker"></i>
-                            </div> -->
                             <div class="address-text">
                                 <span class="label">Address:</span>
                                 <div class="desc">{{ env('SITEADDRESS') }}</div>
@@ -448,6 +572,7 @@
                                     </div>
                                 </div>
                             </fieldset>
+                            <div class="wpcf7-response-output" aria-hidden="true"></div>
                         </form>
                         <!-- Feedback Form End -->
                     </div>
@@ -459,22 +584,23 @@
     <!-- Main Contact Content End -->
 </div>
 
-<script>
+{{-- <script>
     function validateForm(fields) {
         let isValid = true;
-        $('.error').text(''); // Clear previous errors
+        $('.error').text(''); // Clear old errors
         fields.forEach(field => {
-            const value = $(`#${field.id}`).val();
-            // Trim whitespace for validation
-            const trimmedValue = value ? value.trim() : '';
-
-            if (!trimmedValue) {
+            const value = $(`#${field.id}`).val() || null;
+            // if (value != null) {
+            //     value.trim(); // Trim whitespace
+            // }
+            // Basic required check
+            if (!value || value.trim() === '') { // Check for null/empty/whitespace
                 $(`#error-${field.id}`).text(`${field.label} is required`);
                 isValid = false;
-            } else if (field.type === 'email' && !validateEmail(trimmedValue)) {
+            } else if (field.type === 'email' && !validateEmail(value.trim())) { // Validate email format
                 $(`#error-${field.id}`).text(`Please enter a valid email`);
                 isValid = false;
-            } else if (field.type === 'tel' && !/^\d{10}$/.test(trimmedValue)) {
+            } else if (field.type === 'tel' && !/^\d{10}$/.test(value.trim())) { // Validate phone format (10 digits)
                 $(`#error-${field.id}`).text(`Phone must be 10 digits`);
                 isValid = false;
             }
@@ -496,7 +622,7 @@
             { id: 'message', label: 'Message' }
         ];
         if (!validateForm(fields)) {
-            return false; // Stop submission if validation fails
+            return false; // stop submission if validation fails
         }
         // Show loading spinner
         $('.readon').addClass('loading-show');
@@ -504,40 +630,214 @@
         $.ajax({
             type: 'POST',
             url: action,
-            data: $('#feedback-form').serialize(),
+             $('#feedback-form').serialize(),
             success: function (data) {
                 $('#success-message').html(`${data.message}`);
                 $('#success-alert').fadeIn();
                 $('.readon').removeClass('loading-show'); // Hide spinner
                 $('#feedback-form')[0].reset(); // Reset form
-                // Clear previous errors on successful submission
-                $('.error').text('');
+                // Clear previous errors on success
+                 $('.error').text('');
                 // Auto-hide success message after 5 seconds
                 setTimeout(() => {
                     $('#success-alert').fadeOut();
                 }, 5000);
             },
             error: function (xhr, status, error) {
-                // Handle error response
+                // Handle error response (optional but good practice)
                 let errorMessage = 'An error occurred while submitting the form. Please try again.';
                 if (xhr.responseJSON && xhr.responseJSON.message) {
                     errorMessage = xhr.responseJSON.message;
                 }
-                $('#success-message').html(errorMessage);
-                // Temporarily change alert style to danger (optional)
-                const originalClass = $('#success-alert').attr('class');
-                $('#success-alert').removeClass('alert-success-2').addClass('alert-danger').fadeIn();
+                $('#success-message').html(errorMessage); // Reuse success alert for errors, or create a separate one
+                $('#success-alert').removeClass('alert-success-2').addClass('alert-danger').fadeIn(); // Change style to danger
                 $('.readon').removeClass('loading-show'); // Hide spinner
 
-                // Auto-hide error message after 5 seconds
+                 // Auto-hide error message after 5 seconds
                 setTimeout(() => {
                     $('#success-alert').fadeOut(() => {
-                        // Reset class after fade out if needed elsewhere
-                        $('#success-alert').removeClass('alert-danger').addClass('alert-success-2');
+                         // Reset class after fade out if needed elsewhere
+                         $('#success-alert').removeClass('alert-danger').addClass('alert-success-2');
                     });
                 }, 5000);
             }
         });
     }
+</script> --}}
+<script>
+    // Email validation helper function
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    // Generic form validation function
+    function validateForm() {
+        let isValid = true;
+        // Clear previous error messages
+        $('.error').text('');
+
+        // Define fields and their validation rules
+        const fields = [
+            { id: 'name', label: 'Name', required: true },
+            { id: 'email', label: 'Email', required: true, type: 'email' },
+            { id: 'phone', label: 'Phone', required: true, type: 'tel', pattern: /^\d{10}$/ },
+            { id: 'subject', label: 'Subject', required: true },
+            { id: 'message', label: 'Message', required: true }
+        ];
+
+        fields.forEach(field => {
+            const $field = $(`#${field.id}`);
+            const value = $field.val() ? $field.val().trim() : '';
+
+            // Required field check
+            if (field.required && (!value || value === '')) {
+                $(`#error-${field.id}`).text(`${field.label} is required.`);
+                isValid = false;
+                return; // Exit forEach iteration early
+            }
+
+            // Specific validations (only if field has a value)
+            if (value) {
+                if (field.type === 'email' && !validateEmail(value)) {
+                    $(`#error-${field.id}`).text('Please enter a valid email address.');
+                    isValid = false;
+                } else if (field.type === 'tel' && field.pattern && !field.pattern.test(value)) {
+                    $(`#error-${field.id}`).text('Phone number must be exactly 10 digits.');
+                    isValid = false;
+                }
+                // Add more specific validations here if needed (e.g., subject length)
+            }
+        });
+
+        return isValid;
+    }
+
+    // Main form submission function
+    function submitFeedback(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Perform client-side validation
+        if (!validateForm()) {
+            return; // Stop if validation fails
+        }
+
+        // Get form element and action URL
+        const $form = $('#feedback-form');
+        const actionUrl = $form.attr('action'); // Use the form's native action attribute
+
+        // Show loading indicator on submit button
+        const $submitButton = $('.readon.learn-more.submit');
+        $submitButton.addClass('loading-show');
+
+        // Prepare form data for AJAX submission
+        const formData = $form.serialize();
+
+        // Perform AJAX POST request
+        $.ajax({
+            url: actionUrl,
+            type: 'POST',
+            data: formData,
+            dataType: 'json',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Include CSRF token
+            },
+            success: function(response) {
+                // Hide loading indicator
+                $submitButton.removeClass('loading-show');
+
+                // Handle successful response
+                if (response.status === 'success') {
+                    // Display success message
+                    $('#success-message').text(response.message);
+                    $('#success-alert')
+                        .removeClass('alert-danger')
+                        .addClass('alert-success')
+                        .fadeIn();
+
+                    // Reset the form
+                    $form[0].reset();
+
+                    // Clear any lingering error messages (good practice)
+                    $('.error').text('');
+
+                    // Optionally, scroll to the success message
+                    // $('html, body').animate({ scrollTop: $("#success-alert").offset().top - 100 }, 500);
+
+                    // Auto-hide success message after a few seconds
+                    setTimeout(function() {
+                        $('#success-alert').fadeOut();
+                    }, 5000); // Hide after 5 seconds
+
+                } else {
+                    // Handle unexpected success response structure (shouldn't happen with standard controller)
+                    console.warn('Unexpected success response structure:', response);
+                    $('#success-message').text('Form submitted, but received an unexpected response.');
+                    $('#success-alert')
+                        .removeClass('alert-success')
+                        .addClass('alert-warning') // Use warning class if available, otherwise danger
+                        .fadeIn();
+
+                    setTimeout(function() {
+                        $('#success-alert').fadeOut();
+                    }, 5000);
+                }
+            },
+            error: function(xhr, status, error) {
+                // Hide loading indicator
+                $submitButton.removeClass('loading-show');
+
+                // Handle error response
+                console.error("AJAX Error:", status, error);
+                console.error("XHR Object:", xhr);
+
+                let errorMessage = 'An error occurred while submitting the form. Please try again.';
+
+                // Try to parse JSON error response from Laravel validation or exceptions
+                if (xhr.responseJSON) {
+                    if (xhr.responseJSON.message) {
+                        errorMessage = xhr.responseJSON.message; // General error message from controller
+                    }
+                    // Handle Laravel validation errors specifically
+                    if (xhr.responseJSON.errors) {
+                        // Clear previous errors first
+                        $('.error').text('');
+                        $.each(xhr.responseJSON.errors, function(key, messages) {
+                            // Map the error key (e.g., 'name') to the corresponding error element ID (e.g., 'error-name')
+                            const errorElementId = `error-${key}`;
+                            if ($(`#${errorElementId}`).length) {
+                                // Display the first validation error message for this field
+                                $(`#${errorElementId}`).text(messages[0]);
+                            }
+                        });
+                        errorMessage = 'Please correct the highlighted errors.'; // Generic message for validation errors
+                    }
+                }
+
+                // Display error message in the main alert area
+                $('#success-message').text(errorMessage);
+                $('#success-alert')
+                    .removeClass('alert-success') // Ensure it's not green
+                    .addClass('alert-danger')       // Make it red
+                    .fadeIn();
+
+                // Auto-hide error message after a few seconds
+                setTimeout(function() {
+                    $('#success-alert').fadeOut();
+                }, 7000); // Hide error after 7 seconds
+            }
+        });
+    }
+
+    // Optional: Real-time phone number formatting (restricts input to digits and limits to 10)
+    $(document).ready(function() {
+        $('#phone').on('input', function() {
+            let value = $(this).val().replace(/\D/g, ''); // Remove non-digit characters
+            if (value.length > 10) {
+                value = value.substring(0, 10); // Limit to 10 digits
+            }
+            $(this).val(value); // Update the input field value
+        });
+    });
 </script>
 @endsection

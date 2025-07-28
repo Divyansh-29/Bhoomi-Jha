@@ -3,6 +3,28 @@
         display: table-column;
         text-align: center;
     }
+    /* Style for vertical phone list */
+    .phone-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .phone-list li {
+        margin-bottom: 8px; /* Space between numbers */
+    }
+    .phone-list li:last-child {
+        margin-bottom: 0; /* Remove margin from last item */
+    }
+    .phone-list a {
+        color: inherit; /* Inherit text color */
+        text-decoration: none; /* Remove underline */
+        display: block; /* Make link block-level for better click area */
+        transition: color 0.2s ease; /* Smooth color transition */
+    }
+    .phone-list a:hover {
+        color: #156e68; /* Change color on hover (adjust to your theme) */
+        text-decoration: underline; /* Underline on hover */
+    }
 </style>
 <!-- Footer Start -->
 <footer id="rs-footer" class="rs-footer style2">
@@ -19,7 +41,7 @@
                             However, this depends on YOU too. Let us know how we can work together towards this noble
                             cause. We are eager to hear back from YOU</p>
                     </div>
-                    <ul class="footer-social md-mb-30">
+                    {{-- <ul class="footer-social md-mb-30">
                         <li>
                             <a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
                         </li>
@@ -32,14 +54,36 @@
                         <li>
                             <a href="# " target="_blank"><span><i class="fa fa-instagram"></i></span></a>
                         </li>
-                    </ul>
+                    </ul> --}}
                     <ul class="address-widget">
+                        <!-- Modified Phone Numbers Section -->
                         <li>
                             <i class="flaticon-call"></i>
                             <div class="desc">
-                                <a href="tel: +91 120-4540584"> +91 120-4540584</a>
+                                <!-- Loop through phone numbers from .env -->
+                                @php
+                                    $phoneNumbers = explode(',', env('SITEPHONE'));
+                                @endphp
+                                @if(count($phoneNumbers) > 1)
+                                    <!-- Display multiple numbers vertically -->
+                                    <ul class="phone-list">
+                                        @foreach($phoneNumbers as $phoneNumber)
+                                            <li>
+                                                <a href="tel:{{ str_replace(['+', ' ', '-', '(', ')'], ['', '', '', '', ''], trim($phoneNumber)) }}">
+                                                    {{ trim($phoneNumber) }}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @else
+                                    <!-- Display single number (fallback) -->
+                                    <a href="tel:{{ str_replace(['+', ' ', '-', '(', ')'], ['', '', '', '', ''], trim($phoneNumbers[0])) }}">
+                                        {{ trim($phoneNumbers[0]) }}
+                                    </a>
+                                @endif
                             </div>
                         </li>
+                        <!-- End Modified Phone Numbers Section -->
                         <li>
                             <i class="flaticon-email"></i>
                             <div class="desc">
@@ -57,28 +101,32 @@
                 <div class="col-lg-3 col-md-12 col-sm-12 pl-45 md-pl-15 md-mb-30">
                     <h3 class="widget-title">Services</h3>
                     <ul class="site-map">
-                        <li><a href="{{ route('service','environmental-clearence') }}">Environmental Clearance & EIA Studies</a></li>
-                        <li><a href="{{ route('service','ground-water-clearence') }}">Ground Water Clearance</a></li>
-                        <li><a href="{{ route('service','consent-to-establish-and-operate') }}">Consent to Establish And Operate</a></li>
-                        <li><a href="{{ route('service','periodic-compliance-audits') }}">Periodic Compliance Audits</a></li>
-                        <li><a href="{{ route('service','green-building-cetification') }}">Green Building Certification</a></li>
-                        <!-- <li><a href="#">Risk Assessment Studies</a></li> -->
-                        <li><a href="{{ route('service','design-services') }}">Design Services</a></li>
-                        <li><a href="{{ route('service','operations-and-maintenance') }}">Operations & Maintenance</a></li>
+                         <li><a href="{{route('service','environmental-impacts-assessment')}}">Environmental Impacts Assessment (EIA) Studies</a></li>
+                         <li><a href="{{route('service','environmental-monitoring')}}">Environmental Monitoring</a></li>
+                         <li><a href="{{route('service','environmental-audits')}}">Environmental Audits</a></li>
+                         <li><a href="{{route('service','fc-wc')}}">Forest Clearance (FC), Wildlife Clearance (WC)</a></li>
+                         <li><a href="{{route('service','six-monthly-compliance-report-preparation-for-ec-conditions')}}">Six Monthly Compliance Report Preparation For EC Conditions</a></li>
+                         <li><a href="{{route('service','carbon-foot-print-&-climate-change-studies')}}">Carbon Foot Print & Climate Change Studies</a></li>
+                         <li><a href="{{route('service','socio-economic-impact-assessment')}}">Socio-Economic Impact Assessment</a></li>
+                         <li><a href="{{route('service','design-&-engineering-for-tech')}}">Design & Engineering for Tech MBBR, SBR, ASP, MBR, etc (STP, ETP & CPU etc)</a></li>
+                         <li><a href="{{route('service','annual-environmental-statement')}}">Annual Environmental Statement (Form-V)</a></li>
                     </ul>
                     <hr>
                     <h3 class="widget-title">Quick Links</h3>
                     <ul class="site-map">
-                        <li><a target="__blank" href="{{ asset('assets/privacy_policy.pdf') }}">Privacy Policy</a></li>                        
+                        <li><a target="__blank" href="{{ asset('assets/quality-policy.pdf') }}">Quality Policy</a></li>                        
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12">
-                    <h3 class="widget-title">Solutions</h3>
+                    <h3 class="widget-title">Sectors as per QCI/NABET</h3>
                     <ul class="site-map">
-                        <li><a href="{{ route('solutions', 'sewage-treatment-plant') }}">Sewage Treatment Plants</a></li>
-                        <li><a href="{{ route('solutions', 'effluent-treatment-plant') }}">Effluent Treatment Plants</a></li>
-                        <li><a href="{{ route('solutions', 'water-management') }}">Water Treatment Plants</a></li>
-                        <li><a href="{{ route('solutions', 'solid-waste-management') }}">Solid Waste Management</a></li>                        
+                        <li><a href="{{route('sse','mining-of-minerals')}}">Mining of Minerals</a></li>
+                        <li><a href="{{route('sse','thermal-power-plant')}}">Thermal Power Plant</a></li>
+                        <li><a href="{{route('sse','coal-washeries')}}">Coal Washeries</a></li>
+                        <li><a href="{{route('sse','mineral-benefication')}}">Mineral Benefication</a></li>
+                        <li><a href="{{route('sse','metallurgical-industries')}}">Metallurgical Industries</a></li>
+                        <li><a href="{{route('sse','cement-plants')}}">Cement Plants</a></li>
+                        <li><a href="{{route('sse','building-&-construction-projects')}}">Building & Construction Projects</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 md-mb-30">

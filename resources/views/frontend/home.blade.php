@@ -1,5 +1,5 @@
 @extends('frontend.layout.base')
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @section('content')
     <!-- Slider Section Start -->
     <div class="rs-slider style2">
@@ -23,7 +23,7 @@
                         <div class="sl-desc wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
                         </div>
                         <div class="sl-btn wow fadeInup" data-wow-delay="600ms" data-wow-duration="4000ms">
-                            <a class="readon buy-now sl-btn" href="#">Get started now</a>
+                            <a class="readon buy-now sl-btn" href="{{route('contact-us')}}">Get started now</a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <div class="sl-desc wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
                         </div>
                         <div class="sl-btn wow backInUp" data-wow-delay="400ms" data-wow-duration="3000ms">
-                            <a class="readon buy-now sl-btn" href="#">Get started now</a>
+                            <a class="readon buy-now sl-btn" href="{{route('contact-us')}}">Get started now</a>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                         <div class="sl-desc wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
                         </div>
                         <div class="sl-btn wow backInUp" data-wow-delay="400ms" data-wow-duration="3000ms">
-                            <a class="readon buy-now sl-btn" href="#">Get started now</a>
+                            <a class="readon buy-now sl-btn" href="{{route('contact-us')}}">Get started now</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <div class="sl-desc wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
                         </div>
                         <div class="sl-btn wow backInUp" data-wow-delay="400ms" data-wow-duration="3000ms">
-                            <a class="readon buy-now sl-btn" href="#">Get started now</a>
+                            <a class="readon buy-now sl-btn" href="{{route('contact-us')}}">Get started now</a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                                     Non-ferrous)</span></li>
                         </ul>
                         <div class="btn-part mt-40">
-                            <a class="readon learn-more learn-btn" href="{{route('contact-us')}}">Learn More</a>
+                            <a class="readon learn-more learn-btn" href="{{route('about-us','about-bhoomija')}}">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
             <div class="left-side">
                 <img src="{{asset('assets/images/shape-2.png')}}" alt="">
             </div>
-            <div class="right-side">
+            <div class="right-side">                                            
                 <img src="{{asset('assets/images/shape-3.png')}}" alt="">
             </div>
         </div>
@@ -166,15 +166,14 @@
                             <div class="rs-number-area flip-card-front">
                                 <img src="{{asset('assets/images/our-ser1.jpg')}}" alt="">
                                 <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','environmental-clearence') }}">Environmental Clearance & EIA Studies</a></h3>
+                                    <h3 class="ser-title"><a href="{{ route('service','environmental-clearence') }}">Environmental Impacts Assessment (EIA) Studies</a></h3>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Environmental Clearance & EIA Studies
+                                <h4 class="ser-title mb-1">Environmental Impacts Assessment (EIA) Studies
                                 </h4>
-                                <div class="desc pb-10 text-dark">A must for any organization looking forward to
-                                    starting a new project or augmenting / altering an existing one<br>
-                                    <p><a href="{{ route('service','environmental-clearence') }}"
+                                <div class="desc pb-10 text-dark">Essential assessment for new or modified projects to evaluate potential environmental impacts.<br>
+                                    <p><a href="{{ route('service','environmental-impacts-assessment') }}"
                                             style="font-weight:800;color:#000;">Read more>></a></p>
                                 </div>
                             </div>
@@ -187,15 +186,14 @@
                             <div class="rs-number-area flip-card-front">
                                 <img src="{{asset('assets/images/our-ser2.jpg')}}" alt="">
                                 <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','ground-water-clearence') }}">Ground Water Clearance</a></h3>
+                                    <h3 class="ser-title"><a href="{{ route('service','ground-water-clearence') }}">Environmental Monitoring</a></h3>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Ground Water Clearance
+                                <h4 class="ser-title mb-1">Environmental Monitoring
                                 </h4>
-                                <div class="desc pb-10 text-dark">Feel a need for utilizing ground water for your
-                                    project or processes, get familiar with the rules and processes<br>
-                                    <p><a href="{{ route('service','ground-water-clearence') }}"
+                                <div class="desc pb-10 text-dark">Monitoring environmental parameters, including groundwater usage, to ensure compliance and sustainability.<br>
+                                    <p><a href="{{ route('service','environmental-monitoring') }}"
                                             style="font-weight:800;color:#000;">Read more>></a></p>
                                 </div>
                             </div>
@@ -208,17 +206,14 @@
                             <div class="rs-number-area flip-card-front">
                                 <img src="{{asset('assets/images/our-ser3.jpg')}}" alt="">
                                 <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','consent-to-establish-and-operate') }}">Consent to Establish
-                                            & Operate</a></h3>
+                                    <h3 class="ser-title"><a href="{{ route('service','consent-to-establish-and-operate') }}">Environmental Audits</a></h3>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Consent to Establish
-                                    & Operate
+                                <h4 class="ser-title mb-1">Environmental Audits
                                 </h4>
-                                <div class="desc pb-10 text-dark">About to start the construction or commissioning
-                                    of your project, understand the need of consents for these stages<br>
-                                    <p><a href="{{ route('service','consent-to-establish-and-operate') }}"
+                                <div class="desc pb-10 text-dark">Comprehensive audits to assess environmental compliance during project construction and operation phases.<br>
+                                    <p><a href="{{ route('service','environmental-audits') }}"
                                             style="font-weight:800;color:#000;">Read more>></a></p>
                                 </div>
                             </div>
@@ -231,18 +226,14 @@
                             <div class="rs-number-area flip-card-front">
                                 <img src="{{asset('assets/images/our-ser4')}}.jpg" alt="">
                                 <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','periodic-compliance-audits') }}">Periodic
-                                            Compliance Audits</a></h3>
+                                    <h3 class="ser-title"><a href="{{ route('service','periodic-compliance-audits') }}">Forest Clearance (FC), Wildlife Clearance (WC)</a></h3>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Periodic
-                                    Compliance Audits
+                                <h4 class="ser-title mb-1">Forest Clearance (FC), Wildlife Clearance (WC)
                                 </h4>
-                                <div class="desc pb-10 text-dark">Feeling too much overwhelmed with several
-                                    environmental needs that are actually a must for a sustained future, allow us to
-                                    help you<br>
-                                    <p><a href="{{ route('service','periodic-compliance-audits') }}" style="font-weight:800;color:#000;">Read
+                                <div class="desc pb-10 text-dark">Navigating complex clearances for projects impacting forest or wildlife areas with expert guidance.<br>
+                                    <p><a href="{{ route('service','fc-wc') }}" style="font-weight:800;color:#000;">Read
                                             more>></a></p>
                                 </div>
                             </div>
@@ -255,18 +246,14 @@
                             <div class="rs-number-area flip-card-front">
                                 <img src="{{asset('assets/images/our-ser5.jpg')}}" alt="">
                                 <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','green-building-cetification') }}">Green Building
-                                            Certifications</a></h3>
+                                    <h3 class="ser-title"><a href="{{ route('service','green-building-cetification') }}">Consent to Estalish and Operate (SPBs)</a></h3>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Green Building
-                                    Certifications
+                                <h4 class="ser-title mb-1">Consent to Estalish and Operate (SPBs)
                                 </h4>
-                                <div class="desc pb-10 text-dark">Eager to create something that is environment
-                                    friendly, resource-efficient and sustainable throughout its operational
-                                    life-cycle<br>
-                                    <p><a href="{{ route('service','green-building-cetification') }}" style="font-weight:800;color:#000;">Read
+                                <div class="desc pb-10 text-dark">Securing necessary consents for establishing and operating Small Pollution Control Boards (SPBs).<br>
+                                    <p><a href="{{ route('service','consent-to-estalish-and-operate') }}" style="font-weight:800;color:#000;">Read
                                             more>></a></p>
                                 </div>
                             </div>
@@ -279,16 +266,14 @@
                             <div class="rs-number-area flip-card-front">
                                 <img src="{{asset('assets/images/our-ser7')}}.jpg" alt="">
                                 <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','design-services') }}">Design Services</a></h3>
+                                    <h3 class="ser-title"><a href="{{ route('service','design-services') }}">Six Monthly Compliance Report Preparation For EC Conditions</a></h3>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Design Services
+                                <h4 class="ser-title mb-1">Six Monthly Compliance Report Preparation For EC Conditions
                                 </h4>
-                                <div class="desc pb-10 text-dark">Getting confused with several technologies,
-                                    jargons, requirements and cost implications for deciding what could be the best
-                                    for you, delegate it to us to put forth the most optimal solutions<br>
-                                    <p><a href="{{ route('service','design-services') }}" style="font-weight:800;color:#000;">Read
+                                <div class="desc pb-10 text-dark">Preparing mandatory six-monthly reports demonstrating adherence to Environmental Clearance (EC) conditions.<br>
+                                    <p><a href="{{ route('service','six-monthly-compliance-report-preparation-for-ec-conditions') }}" style="font-weight:800;color:#000;">Read
                                             more>></a></p>
                                 </div>
                             </div>
@@ -301,19 +286,75 @@
                             <div class="rs-number-area flip-card-front">
                                 <img src="{{asset('assets/images/our-ser8')}}.jpg" alt="">
                                 <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','operations-and-maintenance') }}">Operations &
-                                            Maintenance</a></h3>
+                                    <h3 class="ser-title"><a href="{{ route('service','operations-and-maintenance') }}">Carbon Foot Print & Climate Change Studies</a></h3>
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Operations &
-                                    Maintenance
+                                <h4 class="ser-title mb-1">Carbon Foot Print & Climate Change Studies
                                 </h4>
-                                <div class="desc pb-10 text-dark">Want to get out of the nuisances of day-to-day
-                                    operations, performance optimization, compliance, upkeep & maintenance of STP’s,
-                                    ETP’s etc & focus on your core<br>
-                                    <p><a href="{{ route('service','operations-and-maintenance') }}"
+                                <div class="desc pb-10 text-dark">Analyzing your project's carbon footprint and potential climate change impacts for informed decisions.<br>
+                                    <p><a href="{{ route('service','carbon-foot-print-&-climate-change-studies') }}"
                                             style="font-weight:800;color:#000;">Read more>></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-25">
+                    <div class="rs-number flip-card">
+                        <div class="rs-number-text flip-card-inner">
+                            <div class="rs-number-area flip-card-front">
+                                <img src="{{asset('assets/images/our-ser4')}}.jpg" alt="">
+                                <div class="services-text">
+                                    <h3 class="ser-title"><a href="{{ route('service','periodic-compliance-audits') }}">Socio-Economic Impact Assessment</a></h3>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="ser-title mb-1">Socio-Economic Impact Assessment
+                                </h4>
+                                <div class="desc pb-10 text-dark">Evaluating the potential social and economic effects of projects on local communities and regions.<br>
+                                    <p><a href="{{ route('service','socio-economic-impact-assessment') }}" style="font-weight:800;color:#000;">Read
+                                            more>></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-25">
+                    <div class="rs-number flip-card">
+                        <div class="rs-number-text flip-card-inner">
+                            <div class="rs-number-area flip-card-front">
+                                <img src="{{asset('assets/images/our-ser5.jpg')}}" alt="">
+                                <div class="services-text">
+                                    <h3 class="ser-title"><a href="{{ route('service','green-building-cetification') }}">Design & Engineering for Tech MBBR, SBR, ASP, MBR, etc (STP, ETP & CPU etc)</a></h3>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="ser-title mb-1">Design & Engineering for Tech MBBR, SBR, ASP, MBR, etc (STP, ETP & CPU etc)
+                                </h4>
+                                <div class="desc pb-10 text-dark">Expert design and engineering for advanced wastewater treatment technologies like MBBR, SBR, ASP, MBR.<br>
+                                    <p><a href="{{ route('service','design-&-engineering-for-tech') }}" style="font-weight:800;color:#000;">Read
+                                            more>></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                    
+                <div class="col-lg-3 col-md-6 mb-25">
+                    <div class="rs-number flip-card">
+                        <div class="rs-number-text flip-card-inner">
+                            <div class="rs-number-area flip-card-front">
+                                <img src="{{asset('assets/images/our-ser7')}}.jpg" alt="">
+                                <div class="services-text">
+                                    <h3 class="ser-title"><a href="{{ route('service','design-services') }}">Annual Environmental Statement (Form-V)</a></h3>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="ser-title mb-1">Annual Environmental Statement (Form-V)
+                                </h4>
+                                <div class="desc pb-10 text-dark">Preparing the mandatory Annual Environmental Statement (Form-V) for regulatory compliance reporting.<br>
+                                    <p><a href="{{ route('service','annual-environmental-statement') }}" style="font-weight:800;color:#000;">Read
+                                            more>></a></p>
                                 </div>
                             </div>
                         </div>
@@ -324,7 +365,7 @@
     </div>
     <!-- Services Section End -->
     <!-- Why Choose Section Start -->
-    <div class="rs-why-choose style3 bg14 pt-120 pb-120 md-pt-75 md-pb-80"
+    {{-- <div class="rs-why-choose style3 bg14 pt-120 pb-120 md-pt-75 md-pb-80"
         style="background: linear-gradient(rgb(0 24 24 / 84%) 100%, rgb(0 44 2) 100%), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat; background-size: cover;">
         <div class="container  pt-relative">
             <div class="sec-title">
@@ -371,7 +412,7 @@
                                 <i class="fa fa-check"></i>
                                 <a class="" href="online-monitoring.html"><span>Online Monitoring
                                     </span></a>
-                            </li> --}}
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -384,7 +425,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Why Choose Section End -->
     <!-- Process Section Start -->
     {{-- <div class="rs-process style4  pt-120 pb-120 md-pt-80 md-pb-70">
@@ -672,87 +713,105 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
+                    <!-- ... existing HTML before the form ... -->
                     <div class="contact-widget">
                         <div class="sec-title2 mb-40">
                             <span class="sub-text contact mb-15 text-white">Get In Touch</span>
                             <h2 class="title testi-title text-white">Fill The Form Below</h2>
                         </div>
-                        <div id="form-messages"></div>
-                        <div class="wpcf7 no-js" id="wpcf7-f65-o1" lang="en-US" dir="ltr" data-wpcf7-id="65">
-                            <div class="screen-reader-response">
-                                <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                <ul></ul>
-                            </div>
-                            <form action="index.html#wpcf7-f65-o1" method="post" class="wpcf7-form init"
-                                aria-label="Contact form" novalidate="novalidate" data-status="init">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="65" />
-                                    <input type="hidden" name="_wpcf7_version" value="6.0.6" />
-                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f65-o1" />
-                                    <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                        <!-- Display success or error messages -->
+                        <div id="form-messages-home"></div> <!-- Changed ID to be unique -->
+                        <div class="alert alert-success-2 alert-dismissible fade show" role="alert" id="success-alert-home" style="display: none;"> <!-- Changed ID to be unique -->
+                            <strong>Success!</strong> <span id="success-message-home"></span> <!-- Changed ID to be unique -->
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <!-- Feedback Form Start -->
+                        <!-- IMPORTANT: Point the action to your new POST route -->
+                        <form action="{{ route('contact-us.post') }}" method="POST" id="home-feedback-form"> <!-- Changed ID -->
+                            @csrf <!-- Include CSRF token for Laravel -->
+                            <fieldset>
+                                <div class="row">
+                                    <!-- Name Field -->
+                                    <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
+                                        <p>
+                                            <input
+                                                size="40" maxlength="400"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+                                                aria-required="true" aria-invalid="false"
+                                                placeholder="Your Name *" value="" type="text"
+                                                name="name" id="home_name" required /> <!-- Changed name and id -->
+                                            <small class="text-danger error" id="error-home_name"></small> <!-- Changed ID -->
+                                        </p>
+                                    </div>
+                                    <!-- Email Field -->
+                                    <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
+                                        <p>
+                                            <input
+                                                size="40" maxlength="400"
+                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control"
+                                                aria-required="true" aria-invalid="false"
+                                                placeholder="Email *" value="" type="email"
+                                                name="email" id="home_email" required /> <!-- Changed name and id -->
+                                            <small class="text-danger error" id="error-home_email"></small> <!-- Changed ID -->
+                                        </p>
+                                    </div>
+                                    <!-- Phone Field -->
+                                    <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
+                                        <p>
+                                            <input
+                                                size="40" maxlength="400"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+                                                aria-required="true" aria-invalid="false"
+                                                placeholder="Phone no. *" value="" type="text"
+                                                name="phone" id="home_phone" required
+                                                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10)" /> <!-- Changed name and id -->
+                                            <small class="text-danger error" id="error-home_phone"></small> <!-- Changed ID -->
+                                        </p>
+                                    </div>
+                                    <!-- Subject Field -->
+                                    <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
+                                        <p>
+                                            <input
+                                                size="40" maxlength="400"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+                                                aria-required="true" aria-invalid="false"
+                                                placeholder="Your Subject *" value="" type="text"
+                                                name="subject" id="home_subject" required /> <!-- Changed name and id -->
+                                            <small class="text-danger error" id="error-home_subject"></small> <!-- Changed ID -->
+                                        </p>
+                                    </div>
+                                    <!-- Message Field -->
+                                    <div class="col-lg-12 mb-30">
+                                        <p>
+                                            <textarea cols="40" rows="10"
+                                                maxlength="2000"
+                                                class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
+                                                aria-required="true" aria-invalid="false"
+                                                placeholder="Message" name="message" id="home_message" required></textarea> <!-- Changed name and id -->
+                                            <small class="text-danger error" id="error-home_message"></small> <!-- Changed ID -->
+                                        </p>
+                                    </div>
                                 </div>
-                                <fieldset>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                            <p><span class="wpcf7-form-control-wrap" data-name="your_name"><input
-                                                        size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                        aria-required="true" aria-invalid="false"
-                                                        placeholder="Your Name *" value="" type="text"
-                                                        name="your_name" /></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                            <p><span class="wpcf7-form-control-wrap" data-name="your_email"><input
-                                                        size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control"
-                                                        aria-required="true" aria-invalid="false"
-                                                        placeholder="Email *" value="" type="email"
-                                                        name="your_email" /></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                            <p><span class="wpcf7-form-control-wrap" data-name="your_phone"><input
-                                                        size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                        aria-required="true" aria-invalid="false"
-                                                        placeholder="Phone no. *" value="" type="text"
-                                                        name="your_phone" /></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                            <p><span class="wpcf7-form-control-wrap" data-name="your_subject"><input
-                                                        size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                        aria-required="true" aria-invalid="false"
-                                                        placeholder="Your Subject *" value="" type="text"
-                                                        name="your_subject" /></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-12 mb-30">
-                                            <p><span class="wpcf7-form-control-wrap"
-                                                    data-name="your_message"><textarea cols="40" rows="10"
-                                                        maxlength="2000"
-                                                        class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
-                                                        aria-required="true" aria-invalid="false"
-                                                        placeholder="Message" name="your_message"></textarea></span>
-                                            </p>
-                                        </div>
+                                <div class="btn-part">
+                                    <div class="form-group mb-0">
+                                        <p>
+                                            <!-- Changed button type to submit and added onclick handler -->
+                                            <button type="submit" value="SEND" id="send-home" class="readon learn-more submit" onclick="submitHomeFeedback(event)"> <!-- Changed ID -->
+                                                <span class="loading"></span> Submit Now
+                                            </button>
+                                        </p>
                                     </div>
-                                    <div class="btn-part">
-                                        <div class="form-group mb-0">
-                                            <p><button type="submit" value="SEND" id="send"
-                                                    class="readon learn-more submit">Submit Now</button>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <div class="wpcf7-response-output" aria-hidden="true"></div>
-                            </form>
-                        </div>                            
+                                </div>
+                            </fieldset>
+                            <!-- Hidden CF7 response output div kept for potential compatibility -->
+                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                        </form>
+                        <!-- Feedback Form End -->
                     </div>
+                    <!-- ... existing HTML after the form ... -->
                 </div>
             </div>
         </div>
@@ -779,9 +838,9 @@
                                 consultant. We have been working with them for the last SEVEN years on several
                                 diverse environmental regulatory and non-regulatory needs and they have excelled
                                 each and every time and helped us achieve all our needs.</div>
-                            <div class="author-img">
+                            {{-- <div class="author-img">
                                 <img src="wp-content/uploads/2022/01/t1.jpg" alt="">
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="author-part">
                             <a class="name" href="#">Mr. Manish Gupta</a>
@@ -795,9 +854,9 @@
                                     alt="">The services being provided by {{env('SITENAME')}} for their advisory services and
                                 other environment related matters coupled with timely guidance is highly
                                 commendable.</div>
-                            <div class="author-img">
+                            {{-- <div class="author-img">
                                 <img src="wp-content/uploads/2022/02/Virendder-Pratap-Singh.png" alt="">
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="author-part">
                             <a class="name" href="#">Virendder Pratap Singh</a>
@@ -810,5 +869,107 @@
         </div>
     </div> 
     {{-- @include('frontend.layout.partners')    --}}
+    <script>
+    // Home Page Specific Feedback Submission Function
+    function submitHomeFeedback(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Define fields for validation (matching the form field names/ids)
+        const fields = [
+            { id: 'home_name', label: 'Name' },
+            { id: 'home_email', label: 'Email', type: 'email' },
+            { id: 'home_phone', label: 'Phone', type: 'tel' },
+            { id: 'home_subject', label: 'Subject' },
+            { id: 'home_message', label: 'Message' }
+        ];
+
+        // Clear previous errors
+        $('.error').text('');
+        $('#form-messages-home').hide().removeClass('alert-success alert-danger').html(''); // Use unique ID
+        $('#success-alert-home').hide().removeClass('alert-success alert-danger'); // Use unique ID
+
+        // Basic client-side validation
+        let isValid = true;
+        fields.forEach(field => {
+            const value = $(`#${field.id}`).val() || null;
+            if (!value || value.trim() === '') {
+                $(`#error-${field.id}`).text(`${field.label} is required`);
+                isValid = false;
+            } else if (field.type === 'email' && !validateEmail(value.trim())) {
+                $(`#error-${field.id}`).text(`Please enter a valid email`);
+                isValid = false;
+            } else if (field.type === 'tel' && !/^\d{10}$/.test(value.trim())) {
+                $(`#error-${field.id}`).text(`Phone must be 10 digits`);
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            return false; // Stop submission if validation fails
+        }
+
+        // Show loading spinner
+        $('.readon.learn-more.submit').addClass('loading-show');
+
+        // Get form data and action URL
+        const form = $('#home-feedback-form'); // Use the new form ID
+        const actionUrl = form.attr('action'); // Get the action URL from the form
+        const formData = form.serialize(); // Serialize form data
+
+        // Perform AJAX POST request
+        $.ajax({
+            type: 'POST',
+            url: actionUrl,
+             formData,
+            dataType: 'json',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Include CSRF token
+            },
+            success: function (data) {
+                // Hide loading spinner
+                $('.readon.learn-more.submit').removeClass('loading-show');
+
+                if (data.status === 'success') {
+                    // Show success message using the unique home page elements
+                    $('#success-message-home').html(`${data.message}`); // Use unique ID
+                    $('#success-alert-home').fadeIn(); // Use unique ID
+                    form[0].reset(); // Reset the form
+
+                    // Auto-hide success message after 5 seconds
+                    setTimeout(() => {
+                        $('#success-alert-home').fadeOut(); // Use unique ID
+                    }, 5000);
+                } else {
+                    // Handle unexpected success response structure
+                    $('#form-messages-home').removeClass('alert-success').addClass('alert-danger').html('<strong>Error!</strong> Unexpected response.').show(); // Use unique ID
+                }
+            },
+            error: function (xhr, status, error) {
+                // Hide loading spinner
+                $('.readon.learn-more.submit').removeClass('loading-show');
+
+                // Handle error response
+                let errorMessage = 'An error occurred while submitting the form. Please try again.';
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                    errorMessage = xhr.responseJSON.message;
+                }
+
+                // Show error message using the unique home page elements
+                $('#form-messages-home').removeClass('alert-success').addClass('alert-danger').html(`<strong>Error!</strong> ${errorMessage}`).show(); // Use unique ID
+
+                // Auto-hide error message after 5 seconds
+                setTimeout(() => {
+                    $('#form-messages-home').fadeOut(); // Use unique ID
+                }, 7000);
+            }
+        });
+    }
+
+    // Simple email validation helper function
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+</script>
 @endsection
 
