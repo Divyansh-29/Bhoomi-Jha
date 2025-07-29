@@ -483,6 +483,12 @@
                             <h2 class="title">Speak With Us</h2>
                             <p class="mt-3">We're here to assist you. Reach out to us using the information below or send us a message.</p>
                         </div>
+                         <div class="address-box">
+                            <div class="address-text">
+                                <span class="label">Telephone:</span>
+                                <span>011-25-05-6683</span>
+                            </div>
+                        </div>
                         <div class="address-box">
                             <div class="address-text">
                                 <span class="label">Phone:</span>
@@ -495,6 +501,7 @@
                                 @endforeach
                             </div>
                         </div>
+                       
                         <div class="address-box">
                             <div class="address-text">
                                 <span class="label">Email:</span>
