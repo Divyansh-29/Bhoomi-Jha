@@ -112,20 +112,13 @@
                             We lead on our offerings for project clearances related to the following areas:
                         </div>
                         <ul>
-                            <li><i class="fa fa-check"></i><span>Township and Area Development</span></li>
-                            <li><i class="fa fa-check"></i><span>Industrial Estates, EPZ’s, SEZ’s, Biotech
-                                    Parks</span></li>
-                            <li><i class="fa fa-check"></i><span>Building and Construction</span></li>
-                            <li><i class="fa fa-check"></i><span>Cement plants</span></li>
-                            <li><i class="fa fa-check"></i><span>Highways </span></li>
-                            <li><i class="fa fa-check"></i><span> Distilleries</span></li>
-                            <li><i class="fa fa-check"></i><span>Mining of minerals (Opencast, Underground)</span>
-                            </li>
-                            <li><i class="fa fa-check"></i><span>Common Effluent Treatment Plants</span></li>
-                            <li><i class="fa fa-check"></i><span>Oil and gas exploration (Offshore, Onshore)</span>
-                            </li>
-                            <li><i class="fa fa-check"></i><span>Metallurgical Industries (Ferrous,
-                                    Non-ferrous)</span></li>
+                            <li><i class="fa fa-check"></i><span>Mining of Minerals</span></li>
+                            <li><i class="fa fa-check"></i><span>Mining of Minerals</span></li>
+                            <li><i class="fa fa-check"></i><span>Coal Washeries</span></li>
+                            <li><i class="fa fa-check"></i><span>Mineral Beneficiation</span></li>
+                            <li><i class="fa fa-check"></i><span>Metallurgical Industries (Ferrous & Non-Ferrous)</span></li>
+                            <li><i class="fa fa-check"></i><span>Cement Plants</span></li>
+                            <li><i class="fa fa-check"></i><span>Building and Construction Projects </span></li>
                         </ul>
                         <div class="btn-part mt-40">
                             <a class="readon learn-more learn-btn" href="{{route('about-us','about-bhoomija')}}">Learn More</a>
