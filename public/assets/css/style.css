@@ -58,7 +58,7 @@
 html,
 body {
   font-size: 16px;
-  color: #454545;
+  background: linear-gradiant(13deg, #156e68, #aec944);
   font-family: 'Livvic', sans-serif;
   vertical-align: baseline;
   line-height: 26px;

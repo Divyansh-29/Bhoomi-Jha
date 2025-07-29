@@ -817,7 +817,7 @@
         </div>
     </div>
     <!-- Testimonial Section Start -->
-    <div class="rs-testimonial main-home style2 modify1">
+    {{-- <div class="rs-testimonial main-home style2 modify1">
         <div class="overlayer pt-120 pb-120 md-pt-75 md-pb-80">
             <div class="container pt-relative">
                 <div class="sec-left">
@@ -840,7 +840,7 @@
                                 each and every time and helped us achieve all our needs.</div>
                             {{-- <div class="author-img">
                                 <img src="wp-content/uploads/2022/01/t1.jpg" alt="">
-                            </div> --}}
+                            </div>
                         </div>
                         <div class="author-part">
                             <a class="name" href="#">Mr. Manish Gupta</a>
@@ -854,9 +854,9 @@
                                     alt="">The services being provided by {{env('SITENAME')}} for their advisory services and
                                 other environment related matters coupled with timely guidance is highly
                                 commendable.</div>
-                            {{-- <div class="author-img">
+                            <div class="author-img">
                                 <img src="wp-content/uploads/2022/02/Virendder-Pratap-Singh.png" alt="">
-                            </div> --}}
+                            </div> 
                         </div>
                         <div class="author-part">
                             <a class="name" href="#">Virendder Pratap Singh</a>
@@ -867,7 +867,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     {{-- @include('frontend.layout.partners')    --}}
     <script>
     // Home Page Specific Feedback Submission Function

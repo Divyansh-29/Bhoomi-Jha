@@ -28,7 +28,27 @@
 
             <!-- Team Members Container -->
             <div class="team-members-list">
-
+                
+                <div class="team-member-card">
+                    <div class="team-member-inner">
+                        <div class="team-img-wrapper">
+                            <img src="{{ asset('assets/images/team/Kaunain-sidqui1.jpg') }}" alt="Mr. Kaunain Sidqui">
+                        </div>
+                        <div class="team-content-wrapper">
+                            <h3 class="team-name">Mr. Kaunain Sidqui</h3>
+                            <h4 class="team-title">Managing Director</h4>
+                            <p class="team-qualifications">M.Tech in Environmental Science</p>
+                            <div class="team-expertise">
+                                <strong>Expertise:</strong> Water Pollution Management, EIA (Building/Construction), Wastewater Management, Sustainable Urban Planning
+                            </div>
+                            <div class="team-bio">
+                                <p>A qualified environmental professional with specialized expertise in water pollution management and Environmental Impact Assessment (EIA), particularly for the building and construction sector.</p>
+                                <p>His environmental subject knowledge spans hydrology, wastewater treatment technologies, environmental monitoring protocols, pollution control techniques, and sustainable urban planning.</p>
+                                <p>Brings a detail-oriented, compliance-driven approach to every project, ensuring the integration of environmental safeguards into development planning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Director 1: Mr. Ashish Kumar Gupta -->
                 <div class="team-member-card">
                     <div class="team-member-inner">
@@ -52,26 +72,6 @@
                 </div>
 
                 <!-- Director 2: Mr. +-in Sidqui -->
-                <div class="team-member-card">
-                    <div class="team-member-inner">
-                        <div class="team-img-wrapper">
-                            <img src="{{ asset('assets/images/team/Kaunain-sidqui.jpg') }}" alt="Mr. Kaunain Sidqui">
-                        </div>
-                        <div class="team-content-wrapper">
-                            <h3 class="team-name">Mr. Kaunain Sidqui</h3>
-                            <h4 class="team-title">Director & Environmental Specialist</h4>
-                            <p class="team-qualifications">M.Tech in Environmental Science</p>
-                            <div class="team-expertise">
-                                <strong>Expertise:</strong> Water Pollution Management, EIA (Building/Construction), Wastewater Management, Sustainable Urban Planning
-                            </div>
-                            <div class="team-bio">
-                                <p>A qualified environmental professional with specialized expertise in water pollution management and Environmental Impact Assessment (EIA), particularly for the building and construction sector.</p>
-                                <p>His environmental subject knowledge spans hydrology, wastewater treatment technologies, environmental monitoring protocols, pollution control techniques, and sustainable urban planning.</p>
-                                <p>Brings a detail-oriented, compliance-driven approach to every project, ensuring the integration of environmental safeguards into development planning.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Senior Expert 1: Dr. Tanzeem Ahmad Siddiqui -->
                 <div class="team-member-card">
@@ -302,7 +302,6 @@
     position: relative;
     overflow: hidden;
 }
-
 /* Section Title */
 .sec-title .sub-title {
     color: #156e68;
@@ -316,14 +315,12 @@
     border-radius: 30px;
     margin-bottom: 15px;
 }
-
 .sec-title .title {
     color: #333;
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 15px;
 }
-
 .sec-title .desc {
     color: #666;
     font-size: 16px;
@@ -331,14 +328,12 @@
     max-width: 800px;
     margin: 0 auto;
 }
-
 /* Team Member List */
 .team-members-list {
     display: flex;
     flex-direction: column;
     gap: 40px; /* Space between cards */
 }
-
 /* Team Member Card Base Styles */
 .team-member-card {
     background: #ffffff;
@@ -348,201 +343,225 @@
     transition: all 0.3s ease;
     position: relative;
     border: 1px solid #e8e8e8; /* Consistent border */
+    /* Optional: Set a max-width for better control on large screens */
+    /* max-width: 1000px; */
+    /* margin: 0 auto; */
 }
-
 .team-member-card:hover {
     box-shadow: 0 10px 30px rgba(21, 110, 104, 0.15); /* Hover shadow */
     border-color: #156e68; /* Hover border */
     transform: translateY(-5px); /* Lift on hover */
 }
-
-/* Inner wrapper for flex layout */
+/* Inner wrapper for flex layout - CHANGED TO ROW */
 .team-member-inner {
     display: flex;
     flex-direction: row; /* Image left, content right */
+    align-items: flex-start; /* Align items to the top */
+    padding: 25px; /* Reduced padding inside the card */
     height: 100%;
     position: relative;
+    gap: 20px; /* Reduced space between image and content */
 }
-
-/* Image Wrapper */
+/* Image Wrapper - MODIFIED FOR CIRCULAR, SMALLER SIZE, AND BETTER FACE CENTERING */
 .team-img-wrapper {
-    flex: 0 0 30%; /* Takes 30% width */
-    min-width: 250px; /* Minimum width for image area */
-    position: relative;
+    flex: 0 0 auto; /* Don't grow, don't shrink, base on width/height */
+    width: 100px; /* Set desired width (smaller) */
+    height: 100px; /* Set desired height (equal to width for circle) */
+    /* Slightly reduced border-radius for better face fit */
+    border-radius: 45%; /* Reduced from 50% - adjust this value (e.g., 48%, 47%) if needed */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #e9ecef, #f8f9fa); /* Consistent background */
-    border-right: 1px solid #e8e8e8; /* Separator line */
+    /* border: 2px solid #e8e8e8; */ /* Optional border */
+    /* No border-right needed anymore */
+    align-self: flex-start; /* Align image to the start of the flex container */
+    /* Ensure the image itself also has the rounded corners if border-radius < 50% */
+    /* border-radius: inherit; */ /* Uncomment if needed */
 }
 
+/* Image inside the wrapper - ADJUST OBJECT-POSITION */
 .team-img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the area */
+    object-fit: cover; /* Cover the circular area */
+    /* Shift the image slightly downwards to add visual 'top margin' */
+    /* '50%' is horizontal center, '55%' moves the view 5% down the image */
+    /* You can adjust the percentage (e.g., 53%, 58%) to fine-tune the face position */
+    object-position: 50% 55%;
+    /* object-position: center 55%; */ /* Alternative syntax */
     transition: transform 0.5s ease;
+    /* If border-radius is slightly reduced on the wrapper, ensure the image corners also match */
+    /* border-radius: inherit; */ /* Inherits the border-radius from the parent (.team-img-wrapper) - Uncomment if needed */
 }
 
 .team-member-card:hover .team-img-wrapper img {
     transform: scale(1.05); /* Zoom image on hover */
 }
-
-/* Content Wrapper */
+/* Content Wrapper - MODIFIED FOR STACKED LAYOUT */
 .team-content-wrapper {
     flex: 1; /* Takes remaining space */
-    padding: 30px 35px; /* Consistent padding */
+    /* padding removed from here, added to .team-member-inner */
     display: flex;
     flex-direction: column;
+    /* Reduce overall font size slightly for content */
+    font-size: 0.92rem; /* Adjust base font size */
 }
-
 /* For cards without images, content takes full width */
 .team-content-wrapper.full-width-content {
     flex: 1 1 100%; /* Full width */
-    border-left: none; /* No left border if no image */
-    padding: 30px 35px; /* Same padding */
+    /* padding adjustments handled by .team-member-inner */
 }
-
-/* Team Member Titles and Info */
+/* Team Member Titles and Info - ADJUSTED MARGINS AND SIZES */
 .team-name {
-    font-size: 1.5rem; /* Slightly larger name */
+    font-size: 1.3rem; /* Smaller name */
     font-weight: 700;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 6px; /* Reduced space below name */
+    margin-top: 0; /* Remove default top margin */
     line-height: 1.2;
 }
-
 .team-title {
-    font-size: 1.1rem; /* Slightly larger title */
+    font-size: 1rem; /* Smaller title */
     font-weight: 600;
     color: #156e68; /* Consistent color */
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Reduced space below designation */
+    margin-top: 0; /* Remove default top margin */
     line-height: 1.3;
 }
-
 .team-qualifications {
-    font-size: 0.95rem;
+    font-size: 0.9rem; /* Smaller qualifications */
     color: #555;
     font-style: italic;
-    margin-bottom: 15px;
+    margin-bottom: 12px; /* Reduced space below qualifications */
     line-height: 1.4;
 }
-
 .team-expertise {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Smaller expertise */
     color: #444;
-    margin-bottom: 20px;
-    padding: 10px 15px;
+    margin-bottom: 15px; /* Reduced space below expertise */
+    padding: 8px 12px; /* Reduced padding */
     background-color: rgba(174, 201, 68, 0.1); /* Light green background */
     border-radius: 5px;
     border-left: 3px solid #aec944; /* Accent border */
 }
-
 /* Bio Text */
 .team-bio {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.88rem; /* Smaller bio text */
+    line-height: 1.5; /* Slightly tighter line height */
     color: #555;
-    flex-grow: 1; /* Pushes content down */
+    /* flex-grow removed, let it size naturally */
     overflow-y: auto; /* Allow scrolling if content is too long */
-    max-height: 400px; /* Limit height */
-    padding-right: 10px; /* Space for scrollbar */
+    max-height: 250px; /* Reduced max height */
+    padding-right: 8px; /* Space for scrollbar */
 }
-
 .team-bio p {
-    margin-bottom: 15px;
+    margin-bottom: 12px; /* Reduced margin between paragraphs */
 }
-
 /* Responsive Adjustments */
 @media (max-width: 1199px) {
     .team-img-wrapper {
-        flex: 0 0 35%; /* Adjust image width */
-        min-width: 200px; /* Adjust min width */
+        width: 90px; /* Slightly smaller */
+        height: 90px;
+        /* Adjust border-radius if needed for smaller size */
+        /* border-radius: 45%; */
+        /* You might adjust object-position for smaller screens too if necessary */
+        /* .team-img-wrapper img { object-position: 50% 53%; } */
     }
-    .team-content-wrapper {
-        padding: 25px 30px; /* Adjust padding */
+    .team-member-inner {
+        padding: 20px; /* Adjust padding */
+        gap: 18px; /* Adjust gap */
     }
     .team-name {
-        font-size: 1.4rem; /* Adjust name size */
+        font-size: 1.25rem; /* Adjust name size */
     }
     .team-title {
-        font-size: 1rem; /* Adjust title size */
+        font-size: 0.95rem; /* Adjust title size */
     }
-}
-
-@media (max-width: 991px) {
-    .team-member-inner {
-        flex-direction: column; /* Stack on medium screens */
-    }
-
-    .team-img-wrapper {
-        flex: 0 0 250px; /* Fixed height for image */
-        min-width: 100%; /* Full width of card */
-        border-right: none; /* No right border */
-        border-bottom: 1px solid #e8e8e8; /* Bottom border instead */
-    }
-
     .team-content-wrapper {
-        padding: 25px 25px; /* Adjust padding */
+        font-size: 0.9rem; /* Adjust base font size */
     }
-
-    .team-content-wrapper.full-width-content {
-        padding: 25px 25px; /* Adjust padding for full width */
+    .team-bio {
+        font-size: 0.85rem; /* Adjust bio size */
+        max-height: 220px; /* Adjust max height */
     }
 }
-
+@media (max-width: 991px) {
+     /* On medium screens, you might want to keep the row layout or switch to column */
+     /* Let's keep the row layout for now, but make image smaller */
+    .team-img-wrapper {
+        width: 85px; /* Slightly smaller */
+        height: 85px;
+        /* Adjust border-radius if needed for smaller size */
+        /* border-radius: 45%; */
+        /* .team-img-wrapper img { object-position: 50% 53%; } */
+    }
+    .team-member-inner {
+        padding: 20px; /* Adjust padding */
+        gap: 15px; /* Adjust gap */
+    }
+    .team-content-wrapper {
+        font-size: 0.88rem; /* Adjust base font size */
+    }
+    .team-bio {
+        max-height: 200px; /* Adjust max height */
+    }
+    /* Adjust other text sizes if needed */
+}
 @media (max-width: 767px) {
     .key-professionals-section {
         padding-top: 80px;
         padding-bottom: 80px;
     }
-
     .sec-title {
         margin-bottom: 40px;
     }
-
+    /* On small screens, switch to column layout for better readability */
     .team-member-inner {
-        flex-direction: column; /* Ensure stacking on small screens */
+        flex-direction: column; /* Stack image and content */
+        align-items: flex-start; /* Align items to start (left) on small screens */
+        text-align: left; /* Align text left */
+        padding: 20px; /* Adjust padding */
+        gap: 15px; /* Adjust gap */
     }
-
     .team-img-wrapper {
-        flex: 0 0 200px; /* Smaller image height */
-        min-width: 100%; /* Full width */
-        border-right: none;
-        border-bottom: 1px solid #e8e8e8;
+        width: 90px; /* Smaller image */
+        height: 90px;
+        /* margin: 0 auto; */ /* Center the image (flexbox handles this) */
+        align-self: center; /* Center the image on small screens if desired */
+         /* On mobile, you might want the default centering again or adjust differently */
+        /* .team-img-wrapper img { object-position: center; } */ /* Reset to default centering */
     }
-
-    .team-content-wrapper,
-    .team-content-wrapper.full-width-content {
-        padding: 20px 20px; /* Smaller padding */
+    .team-content-wrapper {
+        width: 100%; /* Full width content */
+        text-align: left; /* Ensure text is left-aligned */
+        font-size: 0.95rem; /* Slightly larger base font for small screens */
     }
-
     .team-name {
         font-size: 1.3rem; /* Smaller name */
+        text-align: center; /* Center name on small screens if image is centered */
     }
-
     .team-title {
         font-size: 1rem; /* Smaller title */
+        text-align: center; /* Center title on small screens if image is centered */
     }
-
     .team-qualifications {
         font-size: 0.9rem; /* Smaller qualifications */
     }
-
     .team-expertise {
         font-size: 0.85rem; /* Smaller expertise */
         padding: 8px 12px; /* Smaller padding */
     }
-
     .team-bio {
         font-size: 0.9rem; /* Smaller bio text */
         max-height: 300px; /* Smaller max height */
+        line-height: 1.6; /* Restore line height for readability */
     }
-
     .team-members-list {
         gap: 30px; /* Smaller gap between cards */
     }
 }
 </style>
-
 @endsection
+

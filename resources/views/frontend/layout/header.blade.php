@@ -7,7 +7,7 @@
                 <div class="row rs-vertical-middle">
                     <div class="col-lg-3">
                         <div class="logo-part">
-                            <a href="{{route('home')}}"><img src="{{asset('assets/images/logo1.png')}}" alt="" width="60px"></a>
+                            <a href="{{route('home')}}"><img src="{{asset('assets/images/logo1.jpg')}}" alt="" width="60px"></a>
                         </div>
                     </div>
                     {{-- <div class="col-lg-9 text-right">
@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="logo-area">
                     <a href="#">
-                        <img class="sticky-logo" src="{{asset('assets/images/logo1.png')}}" alt="logo">
+                        <img class="sticky-logo" src="{{asset('assets/images/logo1.jpg')}}" alt="logo">
                     </a>
                 </div>
                 <div class="rs-menu-area">
