@@ -460,23 +460,23 @@
                     <h3 class="widget-title">Get In Touch</h3>
                     <ul class="address-widget">
                         <li>
-                            <img src="/assets/images/icons/telephone.png" alt="Telephone" class="custom-icon">
+                            <img src="{{asset('assets/images/icons/telephone.png')}}" alt="Telephone" class="custom-icon">
                             <span>011-25-05-6683</span>
                         </li>
                         <li>
-                            <img src="/assets/images/icons/phone.png" alt="Phone" class="custom-icon">
+                            <img src="{{asset('assets/images/icons/phone.png')}}" alt="Phone" class="custom-icon">
                             <span>+91-901-588-7771</span>
                         </li>
                         <li>
-                            <img src="/assets/images/icons/phone.png" alt="Phone" class="custom-icon">
+                            <img src="{{asset('assets/images/icons/phone.png')}}" alt="Phone" class="custom-icon">
                             <span>+91-721-766-8737</span>
                         </li>
                         <li>
-                            <img src="/assets/images/icons/phone.png" alt="Phone" class="custom-icon">
+                            <img src="{{asset('assets/images/icons/phone.png')}}" alt="Phone" class="custom-icon">
                             <span>+91-623-287-2151</span>
                         </li>
                         <li>
-                            <img src="/assets/images/icons/email.png" alt="Email" class="custom-icon">
+                            <img src="{{asset('assets/images/icons/email.png')}}" alt="Email" class="custom-icon">
                             <span><a href="mailto:bd@bhoomijha.com">bd@bhoomijha.com</a></span>
                         </li>
                     </ul>
@@ -490,7 +490,7 @@
                     <div class="address-label">Working Address</div>
                     <ul class="address-widget">
                         <li>
-                            <img src="/assets/images/icons/location.png" alt="Location" class="custom-icon">
+                            <img src="{{asset('assets/images/icons/location.png')}}" alt="Location" class="custom-icon">
                             <div class="desc">33, Ground Floor, Pocket-28, Sector-24, Rohini, New Delhi</div>
                         </li>
                     </ul>
@@ -499,7 +499,7 @@
                     <div class="address-label">Registered Address</div>
                     <ul class="address-widget">
                         <li>
-                            <img src="/assets/images/icons/location.png" alt="Location" class="custom-icon">
+                            <img src="{{asset('assets/images/icons/location.png')}}" alt="Location" class="custom-icon">
                             <div class="desc">B2/33, Third Floor, Pashchim Vihar, New Delhi</div>
                         </li>
                     </ul>

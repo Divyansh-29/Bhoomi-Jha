@@ -28,7 +28,7 @@
                     <div class="main-menu">
                         <div class="mobile-menu">
                             <a href="index.html" class="mobile-logo logo-container">
-                                <img src="{{asset('assets/images/logo1.png')}}" alt="logo" class="logo-image">
+                                <img src="{{asset('assets/images/logo1.jpg')}}" alt="logo" class="logo-image">
                                 <div class="company-name-wrapper mobile-name">
                                     <span class="company-name">{{ env('SITENAME') }}</span>
                                 </div>
@@ -171,163 +171,163 @@
 </div>
 
 <style>
-/* ANIMATED LOGO WITH COMPANY NAME */
-.logo-container {
-    display: flex !important;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    /* ANIMATED LOGO WITH COMPANY NAME */
+    .logo-container {
+        display: flex !important;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
 
-.logo-image {
-    transition: transform 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+    .logo-image {
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.company-name-wrapper {
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: slideInRight 0.8s ease forwards 0.3s;
-}
-
-.company-name {
-    font-size: 18px;
-    font-weight: 700;
-    color: #156e68;
-    line-height: 1.2;
-    margin-bottom: 2px;
-    opacity: 0;
-    transform: translateY(-10px);
-    animation: fadeInUp 0.6s ease forwards 0.5s;
-    text-decoration: none !important;
-    white-space: nowrap;
-}
-
-.company-tagline {
-    font-size: 11px;
-    color: #666;
-    font-weight: 500;
-    line-height: 1.2;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 0.6s ease forwards 0.7s;
-    white-space: nowrap;
-}
-
-/* Hover Effects */
-.logo-container:hover .logo-image {
-    transform: scale(1.05);
-}
-
-.logo-container:hover .company-name {
-    color: #1a7a73;
-    text-decoration: none !important;
-}
-
-.logo-container:hover .company-tagline {
-    color: #156e68;
-}
-
-/* Sticky Header Adjustments */
-.sticky-name .company-name {
-    font-size: 16px;
-}
-
-.sticky-name .company-tagline {
-    font-size: 10px;
-}
-
-/* Mobile Adjustments */
-.mobile-name .company-name {
-    font-size: 16px;
-}
-
-.mobile-name .company-tagline {
-    display: none; /* Hide tagline on mobile for space */
-}
-
-/* Animation Keyframes */
-@keyframes slideInRight {
-    from {
+    .company-name-wrapper {
+        display: flex;
+        flex-direction: column;
         opacity: 0;
         transform: translateX(-20px);
+        animation: slideInRight 0.8s ease forwards 0.3s;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-@keyframes fadeInUp {
-    from {
+    .company-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: #156e68;
+        line-height: 1.2;
+        margin-bottom: 2px;
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: fadeInUp 0.6s ease forwards 0.5s;
+        text-decoration: none !important;
+        white-space: nowrap;
+    }
+
+    .company-tagline {
+        font-size: 11px;
+        color: #666;
+        font-weight: 500;
+        line-height: 1.2;
         opacity: 0;
         transform: translateY(10px);
+        animation: fadeInUp 0.6s ease forwards 0.7s;
+        white-space: nowrap;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Responsive Design */
-@media (max-width: 991px) {
-    .logo-container {
-        gap: 10px;
+    /* Hover Effects */
+    .logo-container:hover .logo-image {
+        transform: scale(1.05);
     }
-    
-    .company-name {
+
+    .logo-container:hover .company-name {
+        color: #1a7a73;
+        text-decoration: none !important;
+    }
+
+    .logo-container:hover .company-tagline {
+        color: #156e68;
+    }
+
+    /* Sticky Header Adjustments */
+    .sticky-name .company-name {
         font-size: 16px;
     }
-    
-    .company-tagline {
+
+    .sticky-name .company-tagline {
         font-size: 10px;
     }
-}
 
-@media (max-width: 767px) {
-    .logo-container {
-        gap: 8px;
+    /* Mobile Adjustments */
+    .mobile-name .company-name {
+        font-size: 16px;
     }
-    
-    .company-name {
-        font-size: 14px;
-    }
-    
-    .company-tagline {
-        display: none;
-    }
-    
-    .logo-image {
-        width: 50px !important;
-    }
-}
 
-@media (max-width: 480px) {
-    .company-name {
-        font-size: 13px;
+    .mobile-name .company-tagline {
+        display: none; /* Hide tagline on mobile for space */
     }
-    
-    .logo-image {
-        width: 45px !important;
+
+    /* Animation Keyframes */
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
-}
 
-/* Ensure no underline on logo links */
-.logo-container,
-.logo-container:hover,
-.logo-container:focus,
-.logo-container:active {
-    text-decoration: none !important;
-}
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-.company-name,
-.company-name:hover,
-.company-name:focus,
-.company-name:active {
-    text-decoration: none !important;
-}
+    /* Responsive Design */
+    @media (max-width: 991px) {
+        .logo-container {
+            gap: 10px;
+        }
+        
+        .company-name {
+            font-size: 16px;
+        }
+        
+        .company-tagline {
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .logo-container {
+            gap: 8px;
+        }
+        
+        .company-name {
+            font-size: 14px;
+        }
+        
+        .company-tagline {
+            display: none;
+        }
+        
+        .logo-image {
+            width: 50px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .company-name {
+            font-size: 13px;
+        }
+        
+        .logo-image {
+            width: 45px !important;
+        }
+    }
+
+    /* Ensure no underline on logo links */
+    .logo-container,
+    .logo-container:hover,
+    .logo-container:focus,
+    .logo-container:active {
+        text-decoration: none !important;
+    }
+
+    .company-name,
+    .company-name:hover,
+    .company-name:focus,
+    .company-name:active {
+        text-decoration: none !important;
+    }
 </style>
