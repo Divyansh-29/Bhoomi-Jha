@@ -154,14 +154,14 @@
                     </div> <!-- //.main-menu -->                                
                 </div>
                 <div class="expand-btn-inner search-icon hidden-sticky hidden-md">
-                    <div class="toolbar-sl-share">
+                    {{-- <div class="toolbar-sl-share">
                         <ul class="social">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
