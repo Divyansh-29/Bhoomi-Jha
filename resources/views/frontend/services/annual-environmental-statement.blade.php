@@ -1,374 +1,388 @@
-```html
 @extends('frontend.layout.base')
 @section('content')
-    <!--Full width header End-->
-        <!-- header end-->
-        <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs img1"
-            style="background: url({{asset('assets/images/form-v-compliance-banner.jpg')}});">
-            <div class="breadcrumbs-inner text-center">
-                <h1 class="page-title">Annual Environmental Statement (Form-V)</h1>
-                <ul>
-                    <li title="Bhoomija - Environmental Consultancy Services">
-                        <a class="active" href="{{route('home')}}">Home</a>
-                    </li>
-                    <li>Services /</li>
-                    <li>Annual Environmental Statement (Form-V)</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Breadcrumbs End -->
-        <!-- About Section Start -->
-        <div class="rs-about gray-color pt-80 pb-80 md-pt-80 md-pb-80">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 md-mb-30">
-                        <div class="rs-animation-shape">
-                            <div class="images">
-                                <img src="{{asset('assets/images/form-v-compliance-img.webp')}}" alt="Annual Environmental Statement (Form-V)">
-                            </div>
+
+<!-- Enhanced Annual Environmental Statement Page - Subtle Animations -->
+<div class="formv-page-wrapper">
+    <!-- Enhanced About Section -->
+    <div class="rs-about gray-color pt-100 pb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 md-mb-40">
+                    <div class="animated-image-container">
+                        <div class="images">
+                            <img src="{{asset('assets/images/service/annual-statement.jpg')}}" alt="Annual Environmental Statement (Form-V)" class="enhanced-image">
                         </div>
                     </div>
-                    <div class="col-lg-6 pl-60 md-pl-15">
-                        <div class="contact-wrap">
-                            <div class="sec-title mb-30">
-                                <div class="sub-text style-bg">Services</div>
-                                <h2 class="title pb-38">
-                                    Annual Environmental Statement (Form-V)
-                                </h2>
-                                <div class="desc pb-35">
-                                    Under Rule 14 of the <strong>Environmental (Protection) Rules, 1986</strong>, every industry operating under consent from the <strong>State Pollution Control Board (SPCB)</strong> is required to submit an <strong>Annual Environmental Statement in Form-V format</strong> by <strong>September 30</strong> each year for the previous financial year.
-                                </div>
-                                <div class="desc pb-35">
-                                    At <strong>{{env('SITENAME')}}, </strong>we assist industries in the accurate preparation and timely submission of Form-V in compliance with statutory requirements.
-                                </div>
+                </div>
+                <div class="col-lg-6 pl-60 md-pl-15">
+                    <div class="content-wrap animated-content">
+                        <div class="sec-title mb-40">
+                            <div class="sub-text style-bg">Our Services</div>
+                            <h2 class="title pb-30">
+                                Annual Environmental Statement (Form-V)
+                            </h2>
+                            <div class="desc pb-25">
+                                Under Rule 14 of the <strong>Environmental (Protection) Rules, 1986</strong>, every industry operating under consent from the <strong>State Pollution Control Board (SPCB)</strong> is required to submit an <strong>Annual Environmental Statement in Form-V format</strong> by <strong>September 30</strong> each year for the previous financial year.
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="sec-title mb-30">
-                            <div class="desc pb-35">
+                            <div class="desc pb-25">
+                                At <strong>{{env('SITENAME')}}</strong>, we assist industries in the accurate preparation and timely submission of Form-V in compliance with statutory requirements.
+                            </div>
+                            <div class="desc pb-25">
                                 Our services ensure meticulous compilation of environmental performance data, adherence to prescribed formats, and timely submission to the relevant SPCB. We help you maintain regulatory compliance, avoid penalties, and demonstrate your commitment to environmental stewardship through accurate and comprehensive reporting.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="shape-image">
-                </div>
             </div>
         </div>
-        <!-- Benefits Section End -->
-        <div class="rs-contact-wrap bg5 pt-80 pb-80 md-pt-80 pb-80" style="background: linear-gradient(rgb(0 24 24 / 84%) 100%, rgb(0 44 2) 100%), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat; background-size: cover;">
-            <div class="container">
-                <div class="sec-title2 text-center mb-30">
-                    <p class="title white-color" style="max-width:100%;">Would You Like to know more on how {{env('SITENAME')}} can help you with Annual Environmental Statement (Form-V) submission?</p>
-                    <button class="readon learn-more submit mb-30 mt-30">
-                        <a href="{{route('contact-us')}}" class="text-white">Contact Us</a>
-                    </button>
-                    <div class="text-white">With extensive experience in environmental compliance and regulatory frameworks, {{env('SITENAME')}} provides expert services to ensure your industry meets all Form-V submission requirements under the Environment (Protection) Act, 1986. Our dedicated team manages the entire process from data collection to final submission, guaranteeing accuracy and timeliness.</div>
-                </div>
+    </div>
+
+    <!-- Enhanced CTA Section -->
+    <div class="rs-contact-wrap bg5 pt-80 pb-80 animated-cta" style="background: linear-gradient(rgba(0, 24, 24, 0.84), rgba(0, 44, 2, 0.84)), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat center; background-size: cover;">
+        <div class="container">
+            <div class="sec-title2 text-center mb-30">
+                <p class="title white-color" style="max-width:100%;">Would You Like to know more on how {{env('SITENAME')}} can help you with Annual Environmental Statement (Form-V) submission?</p>
+                <button class="readon learn-more submit mb-30 mt-30">
+                    <a href="{{route('contact-us')}}" class="text-white">Contact Us</a>
+                </button>
+                <div class="text-white">With extensive experience in environmental compliance and regulatory frameworks, {{env('SITENAME')}} provides expert services to ensure your industry meets all Form-V submission requirements under the Environment (Protection) Act, 1986. Our dedicated team manages the entire process from data collection to final submission, guaranteeing accuracy and timeliness.</div>
             </div>
         </div>
-        <hr>
-        <!-- Counter Section Start -->
-        {{-- <div class="rs-contact-wrap bg5 pt-120 pb-390 md-pt-80" style="background: linear-gradient(rgb(0 24 24 / 84%) 100%, rgb(0 44 2) 100%), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat; background-size: cover;">
-            <div class="container">
-                <div class="sec-title2 text-center mb-30">
-                    <h2 class="title white-color">
-                        Contact Us
-                    </h2>
-                </div>
-            </div>
-        </div> --}}
-        <!-- Counter Section End -->
-        <!-- Video Section End -->
-        {{-- <div class="rs-video-wrap style2 inner pb-120 md-pb-80">
-            <div class="container">
-                <div class="row margin-0 gray-color">
-                    <div class="col-lg-6">
-                        <div class="contact-wrap">
-                            <div class="sec-title mb-30">
-                                <h2 class="title pb-38">
-                                    About Us
-                                </h2>
-                                <div class="desc pb-10">
-                                    We Believe in making the world a better place to live.
-                                </div>
-                                <div class="desc pb-10">All our efforts are towards helping create a sustainable environment.</div>
-                                <div class="desc pb-10">However, this depends on YOU too.</div>
-                                <div class="desc pb-10">Let us know how we can work together towards this noble cause</div>
-                                <div class="desc pb-10">We are eager to hear back from YOU</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 padding-0">
-                        <div class="rs-requset">
-                            <div id="form-messages"></div>
-                            <div class="wpcf7 no-js" id="wpcf7-f65-o1" lang="en-US" dir="ltr" data-wpcf7-id="65">
-                                <div class="screen-reader-response">
-                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                    <ul></ul>
-                                </div>
-                                <form action="#wpcf7-f65-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
-                                    <div style="display: none;">
-                                        <input type="hidden" name="_wpcf7" value="65" />
-                                        <input type="hidden" name="_wpcf7_version" value="6.0.6" />
-                                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f65-o1" />
-                                        <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                        <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                    </div>
-                                    <fieldset>
-                                        <div class="row">
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="your_name"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Your Name *" value="" type="text"
-                                                            name="your_name" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="your_email"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Email *" value="" type="email"
-                                                            name="your_email" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="your_phone"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Phone no. *" value="" type="text"
-                                                            name="your_phone" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="your_subject"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Your Subject *" value="" type="text"
-                                                            name="your_subject" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-12 mb-30">
-                                                <p><span class="wpcf7-form-control-wrap"
-                                                        data-name="your_message"><textarea cols="40" rows="10"
-                                                            maxlength="2000"
-                                                            class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Message" name="your_message"></textarea></span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="btn-part">
-                                            <div class="form-group mb-0">
-                                                <p><button type="submit" value="SEND" id="send"
-                                                        class="readon learn-more submit">Submit Now</button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <!-- Video Section End -->
+    </div>
+</div>
+
 <style>
-/* Custom styles for Form-V compliance page - Reusing existing service page styles with minor adjustments */
-.services-item {
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    padding: 30px 25px;
-    transition: all 0.3s ease;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
+/* ENHANCED ANNUAL ENVIRONMENTAL STATEMENT PAGE WITH SUBTLE ANIMATIONS */
+
+/* Remove Banner Completely */
+.rs-breadcrumbs {
+    display: none !important;
+}
+
+/* Enhanced Page Wrapper - Subtle Background */
+.formv-page-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f9f7 0%, #e8f5f0 50%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 60px 0 0;
+}
+
+/* Subtle Floating Background Elements */
+.formv-page-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(21, 110, 104, 0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatBackgroundGentle 12s ease-in-out infinite;
+}
+
+.formv-page-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    left: -8%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(174, 201, 68, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatBackgroundSmallGentle 15s ease-in-out infinite reverse;
+}
+
+@keyframes floatBackgroundGentle {
+    0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+    50% { transform: translateY(-15px) translateX(8px) scale(1.03); }
+}
+
+@keyframes floatBackgroundSmallGentle {
+    0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+    50% { transform: translateY(-12px) translateX(10px) scale(1.04); }
+}
+
+/* Enhanced Content Section */
+.rs-about {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: sectionFadeIn 1s ease forwards 0.2s;
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gentle Image Animation */
+.animated-image-container {
+    opacity: 0;
+    transform: translateX(-25px);
+    animation: imageSlideInGentle 1s ease forwards 0.4s;
+}
+
+@keyframes imageSlideInGentle {
+    0% {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.enhanced-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(21, 110, 104, 0.12);
+    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
 }
-.services-item:hover {
-    border-color: #156e68;
-    box-shadow: 0 10px 30px rgba(21,110,104,0.15);
-    transform: translateY(-5px);
-}
-.services-item::before {
+
+.enhanced-image::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(135deg, #156e68, #aec944);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-.services-item:hover::before {
-    transform: scaleX(1);
-}
-.services-icon-wrapper {
-    width: 100%;
-    height: 180px;
-    margin-bottom: 25px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    border: 2px solid #e8e8e8;
-    transition: all 0.3s ease;
-}
-.services-item:hover .services-icon-wrapper {
-    border-color: #156e68;
-    background: linear-gradient(135deg, #156e68, #aec944);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(21,110,104,0.15);
-}
-.services-icon {
+    left: -100%;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.8s ease;
 }
-.sector-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: all 0.3s ease;
-    filter: brightness(0.9);
+
+.enhanced-image:hover::before {
+    left: 100%;
 }
-.services-item:hover .sector-icon {
-    transform: scale(1.05);
-    filter: brightness(1);
+
+.enhanced-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(21, 110, 104, 0.18);
+    filter: brightness(1.05);
 }
-.services-content {
-    text-align: center;
-    flex-grow: 1;
+
+/* Gentle Content Animation */
+.animated-content {
+    opacity: 0;
+    transform: translateX(25px);
+    animation: contentSlideInGentle 1s ease forwards 0.6s;
 }
-.services-content.text-left {
-    text-align: left;
-}
-.services-content .title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.3;
-    transition: color 0.3s ease;
-}
-.services-item:hover .services-content .title {
-    color: #156e68;
-}
-.services-content .desc {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #666;
-    margin: 0;
-}
-.services-content ul {
-    text-align: left;
-    color: #666;
-    font-size: 13px;
-}
-.services-content ul li {
-    margin-bottom: 5px;
-}
-/* Responsive Design */
-@media (max-width: 1199px) {
-    .services-item {
-        padding: 25px 20px;
+
+@keyframes contentSlideInGentle {
+    0% {
+        opacity: 0;
+        transform: translateX(25px);
     }
-    .services-icon-wrapper {
-        height: 160px;
-    }
-    .services-content .title {
-        font-size: 17px;
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
-@media (max-width: 991px) {
-    .col-lg-4, .col-lg-6, .col-lg-3 {
-        margin-bottom: 30px;
-    }
-    .services-item {
-        padding: 20px 18px;
-    }
-    .services-icon-wrapper {
-        height: 150px;
-    }
-    .services-content .title {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-    .services-content .desc {
-        font-size: 13px;
-    }
-}
-@media (max-width: 767px) {
-    .services-item {
-        padding: 25px 20px;
-        margin-bottom: 20px;
-    }
-    .services-icon-wrapper {
-        height: 160px;
-        margin-bottom: 20px;
-    }
-    .services-content .title {
-        font-size: 17px;
-        margin-bottom: 15px;
-    }
-    .services-content .desc {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-}
-/* Enhanced section styling */
-.sec-title .sub-title {
-    color: #156e68;
+
+/* Refined Typography */
+.rs-about .sec-title .sub-text.style-bg {
+    background: linear-gradient(135deg, #156e68, #1a7a73);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
+    letter-spacing: 1.2px;
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.9) translateY(-5px);
+    animation: badgeSlideIn 0.8s ease forwards 0.8s;
 }
-.sec-title .title {
-    color: #333;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-.sec-title .desc {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
-/* Equal height for all cards - SCOPED TO SERVICES SECTION ONLY */
-.rs-services .row, .rs-about .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-.h-100 {
-    height: 100%;
-}
-@media (min-width: 992px) {
-    .rs-services .row > [class*="col-"], .rs-about .row > [class*="col-"] {
-        display: flex;
+
+@keyframes badgeSlideIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
     }
 }
-/* Specific banner adjustment if needed */
-.rs-breadcrumbs.img1 {
-    background-size: cover !important;
-    background-position: center !important;
+
+.rs-about .sec-title .title {
+    background: linear-gradient(45deg, #156e68, #2a9d8f, #aec944);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: titleSlideIn 0.8s ease forwards 1s;
+}
+
+@keyframes titleSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+        letter-spacing: 1px;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0;
+    }
+}
+
+/* Enhanced Justified Text */
+.rs-about .desc {
+    text-align: justify !important;
+    text-justify: inter-word;
+    line-height: 1.7;
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: descFadeIn 0.6s ease forwards;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.rs-about .desc:nth-of-type(1) { 
+    animation-delay: 1.2s; 
+}
+.rs-about .desc:nth-of-type(2) { 
+    animation-delay: 1.4s; 
+}
+.rs-about .desc:nth-of-type(3) { 
+    animation-delay: 1.6s; 
+}
+
+@keyframes descFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rs-about .desc:hover {
+    background: rgba(21, 110, 104, 0.02);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(21, 110, 104, 0.05);
+}
+
+.rs-about .desc strong {
+    color: #156e68;
+    font-weight: 600;
+    background: linear-gradient(135deg, #156e68, #2a9d8f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Gentle Hover Effects */
+.rs-about .sec-title .sub-text.style-bg:hover {
+    transform: scale(1.02) translateY(-1px);
+    box-shadow: 0 5px 15px rgba(21, 110, 104, 0.25);
+    background: linear-gradient(135deg, #1a7a73, #2a9d8f);
+}
+
+.rs-about .sec-title .title:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(0 3px 8px rgba(21, 110, 104, 0.2));
+}
+
+/* Enhanced CTA Section */
+.animated-cta {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: ctaSlideIn 1s ease forwards 1.8s;
+}
+
+@keyframes ctaSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-cta .readon.learn-more.submit {
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.animated-cta .readon.learn-more.submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle Background Animation */
+.formv-page-wrapper {
+    animation: pageBreathGentle 25s ease-in-out infinite;
+}
+
+@keyframes pageBreathGentle {
+    0%, 100% { 
+        background: linear-gradient(135deg, #f0f9f7 0%, #e8f5f0 50%, #ffffff 100%); 
+    }
+    50% { 
+        background: linear-gradient(135deg, #e8f5f0 0%, #f0f9f7 50%, #f8fffe 100%); 
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .rs-about .sec-title .title {
+        font-size: 2rem;
+    }
+    
+    .pl-60 {
+        padding-left: 15px !important;
+    }
+    
+    .animated-image-container,
+    .animated-content {
+        animation-delay: 0.2s;
+    }
+}
+
+@media (max-width: 767px) {
+    .rs-about .sec-title .title {
+        font-size: 1.7rem;
+    }
+    
+    .rs-about .desc {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    
+    .formv-page-wrapper {
+        padding: 40px 0 0;
+    }
+    
+    .enhanced-image {
+        border-radius: 15px;
+    }
 }
 </style>
+
 @endsection

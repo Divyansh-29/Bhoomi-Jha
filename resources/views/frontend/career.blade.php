@@ -1,762 +1,905 @@
 @extends('frontend.layout.base')
 @section('content')
-    <!--Full width header End-->
-        <!-- header end-->
-        <!-- Breadcrumbs Start -->
-        <div class="rs-breadcrumbs img1"
-            style="background: linear-gradient(135deg, rgba(21, 110, 104, 0.85), rgba(13, 75, 70, 0.9)), url({{asset('assets/images/career-banner-bg.jpg')}}) no-repeat center center; background-size: cover;">
-            <div class="breadcrumbs-inner text-center">
-                <h1 class="page-title">Careers at {{ env('SITENAME') }}</h1>
-                <ul>
-                    <li title="{{ env('SITENAME') }} - Environmental Consultancy Services">
-                        <a class="active" href="{{route('home')}}">Home</a>
-                    </li>
-                    <li>Careers</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Breadcrumbs End -->
-        <!-- Intro Section Start -->
-        <div class="rs-about gray-color pt-120 pb-120 md-pt-80 md-pb-80">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 md-mb-30">
-                        <div class="rs-animation-shape">
-                            <div class="images">
-                                <img src="{{asset('assets/images/career-intro-img.webp')}}" alt="Careers at {{ env('SITENAME') }}" style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pl-60 md-pl-15">
-                        <div class="contact-wrap">
-                            <div class="sec-title mb-30">
-                                <div class="sub-text style-bg">Join Our Team</div>
-                                <h2 class="title pb-38">
-                                    Shape the Future of Environmental Sustainability
-                                </h2>
-                                <div class="desc pb-35">
-                                    At <strong>{{ env('SITENAME') }} Envirocare Private Limited, </strong>we are passionate about creating a sustainable future. We believe that our people are our greatest asset, and we are always looking for talented individuals who share our vision and commitment to environmental excellence.
-                                </div>
-                                <div class="desc pb-35">
-                                    Join our dynamic team of environmental professionals and contribute to meaningful projects that make a real difference. We offer exciting career opportunities in a collaborative and growth-oriented environment where innovation thrives.
-                                </div>
-                            </div>
-                        </div>
+
+<!-- Enhanced Careers Page -->
+<div class="careers-wrapper">
+    <div class="container">
+        <!-- Simple Intro Section -->
+        <div class="intro-section">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animated-image-container">
+                    <img src="{{asset('assets/images/career-intro-img.webp')}}" alt="Careers at {{ env('SITENAME') }}" class="intro-image">
+                </div>
+                <div class="col-lg-6">
+                    <div class="intro-content">
+                        <h1 class="animated-title">Join {{ env('SITENAME') }}</h1>
+                        <p class="animated-desc">Shape the future of environmental sustainability with us. We're always looking for passionate professionals who share our vision.</p>
+                        <p class="animated-desc-2">Be part of a team that makes a real difference in environmental consultancy and sustainable development.</p>
                     </div>
                 </div>
-                <div class="shape-image">
-                </div>
             </div>
         </div>
-        <div class="rs-contact-wrap bg5 pt-80 pb-80 md-pt-80 pb-80" style="background: linear-gradient(rgb(0 24 24 / 84%) 100%, rgb(0 44 2) 100%), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat; background-size: cover;">
-            <div class="container">
-                <div class="sec-title2 text-center mb-30">
-                    <p class="title white-color" style="max-width:100%;">Can't find a suitable position? Send us your resume anyway!</p>
-                    <button class="readon learn-more submit mb-30 mt-30">
-                        <a href="{{route('contact-us')}}" class="text-white">Contact Us</a>
-                    </button>
-                    <div class="text-white">We're always interested in connecting with talented professionals who share our passion for environmental sustainability. Submit your resume and cover letter, and we'll reach out if a suitable opportunity arises.</div>
-                </div>
-            </div>
-        </div>
-        <!-- Apply Now Section End -->
-        <!-- Application Form Section Start -->
-        <div class="rs-services style2 gray-color pt-80 pb-80 md-pt-80 md-pb-80">
-            <div class="container">
-                <div class="sec-title text-center mb-60">
-                    <span class="sub-title">Job Application</span>
-                    <h2 class="title">Submit Your Application</h2>
-                    <div class="desc mt-10">Fill out the form below to apply for a position at {{ env('SITENAME') }}</div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="rs-requset">
-                            <div id="form-messages"></div>
-                            <div class="wpcf7 no-js" id="wpcf7-f65-o1" lang="en-US" dir="ltr" data-wpcf7-id="65">
-                                <div class="screen-reader-response">
-                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                    <ul></ul>
-                                </div>
-                                <form action="#wpcf7-f65-o1" method="post" class="wpcf7-form init" aria-label="Career Application form" novalidate="novalidate" data-status="init" enctype="multipart/form-data">
-                                    <div style="display: none;">
-                                        <input type="hidden" name="_wpcf7" value="65" />
-                                        <input type="hidden" name="_wpcf7_version" value="6.0.6" />
-                                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f65-o1" />
-                                        <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                        <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+
+        <!-- Enhanced Application Form Section -->
+        <div class="application-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="application-form animated-form">
+                        <div class="form-header">
+                            <h2 class="form-title">Submit Your Application</h2>
+                            <p class="form-subtitle">Join our team of environmental professionals</p>
+                        </div>
+                        
+                        <!-- Success/Error Messages -->
+                        <div class="alert alert-success" id="success-alert" style="display: none;">
+                            <div class="alert-icon">✓</div>
+                            <div class="alert-content">
+                                <strong>Application Submitted!</strong>
+                                <span id="success-message">We'll review your application and get back to you soon.</span>
+                            </div>
+                        </div>
+                        
+                        <form action="{{ route('contact-us.post') }}" method="POST" enctype="multipart/form-data" id="career-form">
+                            @csrf
+                            <input type="hidden" name="form_type" value="career_application">
+                            <input type="hidden" name="subject" value="Career Application">
+                            
+                            <!-- Personal Information Section -->
+                            <div class="form-section">
+                                <h3 class="section-title">
+                                    <span class="section-number">01</span>
+                                    Personal Information
+                                </h3>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="name" class="form-label">
+                                                <span class="label-text">Full Name</span>
+                                                <span class="required">*</span>
+                                            </label>
+                                            <input type="text" id="name" name="name" class="form-control" required>
+                                            <small class="error-text" id="error-name"></small>
+                                        </div>
                                     </div>
-                                    <fieldset>
-                                        <div class="row">
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="your_name"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Full Name *" value="" type="text"
-                                                            name="your_name" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="your_email"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Email *" value="" type="email"
-                                                            name="your_email" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="your_phone"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Phone no. *" value="" type="text"
-                                                            name="your_phone" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="current_location"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text form-control"
-                                                            aria-invalid="false"
-                                                            placeholder="Current Location" value="" type="text"
-                                                            name="current_location" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="total_experience"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number form-control"
-                                                            aria-invalid="false"
-                                                            placeholder="Total Experience (Years)" value="" type="number"
-                                                            name="total_experience" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="relevant_experience"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number form-control"
-                                                            aria-invalid="false"
-                                                            placeholder="Relevant Experience (Years)" value="" type="number"
-                                                            name="relevant_experience" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-12 mb-30">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="applied_position"><select
-                                                            class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            name="applied_position">
-                                                            <option value="">Select Position Applying For *</option>
-                                                            <option value="Environmental Consultant - Mining Sector">Environmental Consultant - Mining Sector</option>
-                                                            <option value="Senior Environmental Scientist - Water Resources">Senior Environmental Scientist - Water Resources</option>
-                                                            <option value="GIS Analyst - Environmental Applications">GIS Analyst - Environmental Applications</option>
-                                                            <option value="Junior Environmental Engineer - Air Quality">Junior Environmental Engineer - Air Quality</option>
-                                                            <option value="Other">Other</option>
-                                                        </select></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-12 mb-30">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="cover_letter"><textarea cols="40" rows="10"
-                                                            maxlength="2000"
-                                                            class="wpcf7-form-control wpcf7-textarea form-control"
-                                                            aria-invalid="false"
-                                                            placeholder="Cover Letter (Tell us why you're interested in joining {{ env('SITENAME') }})"
-                                                            name="cover_letter"></textarea></span>
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-12 mb-30">
-                                                <p><span class="wpcf7-form-control-wrap" data-name="resume_upload"><input
-                                                            type="file" accept=".pdf,.doc,.docx"
-                                                            class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required form-control"
-                                                            aria-required="true" aria-invalid="false"
-                                                            name="resume_upload" /></span>
-                                                    <small class="text-muted">Upload your resume (PDF/DOC/DOCX, Max 5MB)</small>
-                                                </p>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">
+                                                <span class="label-text">Email Address</span>
+                                                <span class="required">*</span>
+                                            </label>
+                                            <input type="email" id="email" name="email" class="form-control" required>
+                                            <small class="error-text" id="error-email"></small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label">
+                                                <span class="label-text">Phone Number</span>
+                                                <span class="required">*</span>
+                                            </label>
+                                            <input type="tel" id="phone" name="phone" class="form-control" maxlength="10" pattern="[0-9]{10}" required>
+                                            <small class="error-text" id="error-phone"></small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="location" class="form-label">
+                                                <span class="label-text">Current Location</span>
+                                            </label>
+                                            <input type="text" id="location" name="location" class="form-control" placeholder="City, State">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Professional Information Section -->
+                            <div class="form-section">
+                                <h3 class="section-title">
+                                    <span class="section-number">02</span>
+                                    Professional Background
+                                </h3>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="experience" class="form-label">
+                                                <span class="label-text">Total Experience</span>
+                                            </label>
+                                            <select id="experience" name="experience" class="form-control">
+                                                <option value="">Select experience level</option>
+                                                <option value="0-1">0-1 years (Fresher/Entry Level)</option>
+                                                <option value="1-3">1-3 years</option>
+                                                <option value="3-5">3-5 years</option>
+                                                <option value="5-10">5-10 years</option>
+                                                <option value="10+">10+ years (Senior Level)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="position" class="form-label">
+                                                <span class="label-text">Position of Interest</span>
+                                            </label>
+                                            <select id="position" name="position" class="form-control">
+                                                <option value="">Select position</option>
+                                                <option value="Environmental Consultant">Environmental Consultant</option>
+                                                <option value="Environmental Scientist">Environmental Scientist</option>
+                                                <option value="GIS Analyst">GIS Analyst</option>
+                                                <option value="Project Manager">Project Manager</option>
+                                                <option value="Other">Other/Open to Discussion</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <div class="form-group">
+                                            <label for="skills" class="form-label">
+                                                <span class="label-text">Key Skills & Expertise</span>
+                                            </label>
+                                            <textarea id="skills" name="skills" rows="3" class="form-control" placeholder="e.g., Environmental Impact Assessment, GIS Software, Water Quality Analysis, etc."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Application Details Section -->
+                            <div class="form-section">
+                                <h3 class="section-title">
+                                    <span class="section-number">03</span>
+                                    Application Details
+                                </h3>
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <div class="form-group">
+                                            <label for="message" class="form-label">
+                                                <span class="label-text">Cover Letter</span>
+                                            </label>
+                                            <textarea id="message" name="message" rows="6" class="form-control" placeholder="Tell us about yourself, your passion for environmental work, and why you want to join our team..."></textarea>
+                                            <div class="character-count">
+                                                <span id="char-count">0</span>/1000 characters
                                             </div>
                                         </div>
-                                        <div class="btn-part">
-                                            <div class="form-group mb-0">
-                                                <p><button type="submit" value="SEND" id="send"
-                                                        class="readon learn-more submit">Submit Application</button>
-                                                </p>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <div class="form-group">
+                                            <label for="resume" class="form-label">
+                                                <span class="label-text">Upload Resume</span>
+                                                <span class="required">*</span>
+                                            </label>
+                                            <div class="file-upload-wrapper">
+                                                <input type="file" id="resume" name="resume" class="file-input" accept=".pdf,.doc,.docx" required>
+                                                <div class="file-upload-area" id="file-upload-area">
+                                                    <div class="upload-icon">📄</div>
+                                                    <div class="upload-text">
+                                                        <span class="upload-main">Choose file or drag & drop</span>
+                                                        <span class="upload-sub">PDF, DOC, DOCX (Max 5MB)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="file-selected" id="file-selected" style="display: none;">
+                                                    <div class="file-info">
+                                                        <span class="file-name" id="file-name"></span>
+                                                        <span class="file-size" id="file-size"></span>
+                                                    </div>
+                                                    <button type="button" class="remove-file" id="remove-file">×</button>
+                                                </div>
                                             </div>
+                                            <small class="error-text" id="error-resume"></small>
                                         </div>
-                                    </fieldset>
-                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                </form>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
+                            <!-- Submit Section -->
+                            <div class="form-section submit-section">
+                                <div class="text-center">
+                                    <button type="submit" class="submit-btn" onclick="submitCareerForm(event)">
+                                        <span class="btn-icon">🚀</span>
+                                        <span class="btn-text">Submit Application</span>
+                                        <div class="loading-spinner"></div>
+                                    </button>
+                                    <p class="submit-note">We'll review your application within 2-3 business days</p>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Application Form Section End -->
-        <!-- Life at Bhoomija Section Start -->
-        <div class="rs-about pt-80 pb-80 md-pt-80 md-pb-80">
-            <div class="container">
-                <div class="sec-title text-center mb-60">
-                    <span class="sub-title">Life at {{ env('SITENAME') }}</span>
-                    <h2 class="title">Our Workplace Culture</h2>
-                    <div class="desc mt-10">Experience the vibrant and supportive environment we foster</div>
-                </div>
-                <div class="row gutter-40">
-                    <!-- Team Collaboration -->
-                    <div class="col-lg-4 col-md-6 mb-40 wow fadeInUp">
-                        <div class="services-item hover-bg h-100">
-                            <div class="services-icon-wrapper">
-                                <div class="services-icon">
-                                    <img src="{{ asset('assets/images/icons/team-collaboration-icon.png') }}" alt="Team Collaboration Icon" class="sector-icon">
-                                </div>
-                            </div>
-                            <div class="services-content text-left">
-                                <h4 class="title">Team Collaboration</h4>
-                                <p class="desc">We believe in the power of teamwork. Our collaborative culture encourages knowledge sharing, cross-functional projects, and collective problem-solving to achieve exceptional results.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Continuous Learning -->
-                    <div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="services-item hover-bg h-100">
-                            <div class="services-icon-wrapper">
-                                <div class="services-icon">
-                                    <img src="{{ asset('assets/images/icons/continuous-learning-icon.png') }}" alt="Continuous Learning Icon" class="sector-icon">
-                                </div>
-                            </div>
-                            <div class="services-content text-left">
-                                <h4 class="title">Continuous Learning</h4>
-                                <p class="desc">We invest in our employees' growth through workshops, training programs, conference attendance, and professional certifications to keep pace with industry advancements.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recognition & Rewards -->
-                    <div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="services-item hover-bg h-100">
-                            <div class="services-icon-wrapper">
-                                <div class="services-icon">
-                                    <img src="{{ asset('assets/images/icons/recognition-rewards-icon.png') }}" alt="Recognition & Rewards Icon" class="sector-icon">
-                                </div>
-                            </div>
-                            <div class="services-content text-left">
-                                <h4 class="title">Recognition & Rewards</h4>
-                                <p class="desc">We celebrate achievements and milestones through performance-based incentives, peer recognition programs, and annual awards to acknowledge outstanding contributions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Work-Life Balance -->
-                    <div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="services-item hover-bg h-100">
-                            <div class="services-icon-wrapper">
-                                <div class="services-icon">
-                                    <img src="{{ asset('assets/images/icons/work-life-balance-icon.png') }}" alt="Work-Life Balance Icon" class="sector-icon">
-                                </div>
-                            </div>
-                            <div class="services-content text-left">
-                                <h4 class="title">Work-Life Balance</h4>
-                                <p class="desc">We understand the importance of personal time. Our flexible work arrangements, wellness initiatives, and generous leave policies help maintain a healthy balance.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Diversity & Inclusion -->
-                    <div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="services-item hover-bg h-100">
-                            <div class="services-icon-wrapper">
-                                <div class="services-icon">
-                                    <img src="{{ asset('assets/images/icons/diversity-inclusion-icon.png') }}" alt="Diversity & Inclusion Icon" class="sector-icon">
-                                </div>
-                            </div>
-                            <div class="services-content text-left">
-                                <h4 class="title">Diversity & Inclusion</h4>
-                                <p class="desc">We embrace diversity in thought, background, and perspective. Our inclusive environment ensures everyone feels valued, respected, and empowered to contribute their best.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Community Engagement -->
-                    <div class="col-lg-4 col-md-6 mb-40 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="services-item hover-bg h-100">
-                            <div class="services-icon-wrapper">
-                                <div class="services-icon">
-                                    <img src="{{ asset('assets/images/icons/community-engagement-icon.png') }}" alt="Community Engagement Icon" class="sector-icon">
-                                </div>
-                            </div>
-                            <div class="services-content text-left">
-                                <h4 class="title">Community Engagement</h4>
-                                <p class="desc">We encourage our employees to participate in volunteer activities and community outreach programs, reinforcing our commitment to social responsibility and environmental stewardship.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Life at Bhoomija Section End -->
-        <!-- CTA Section Start -->
-        <div class="rs-contact-wrap bg5 pt-80 pb-80 md-pt-80 pb-80" style="background: linear-gradient(rgb(0 24 24 / 84%) 100%, rgb(0 44 2) 100%), url(https://www.pnas.org/content/118/32/e2112863118/F1.large.jpg) no-repeat; background-size: cover;">
-            <div class="container">
-                <div class="sec-title2 text-center mb-30">
-                    <p class="title white-color" style="max-width:100%;">Ready to take the next step in your environmental career?</p>
-                    <button class="readon learn-more submit mb-30 mt-30">
-                        <a href="#apply-now" class="text-white">Apply Now</a>
-                    </button>
-                    <div class="text-white">Join our team of passionate environmental professionals at {{ env('SITENAME') }} Envirocare Private Limited and contribute to shaping a sustainable future. Explore current openings and submit your application today.</div>
-                </div>
-            </div>
-        </div>
-        <!-- CTA Section End -->
+    </div>
+</div>
+
 <style>
-/* Custom styles for career page - Reusing existing service page styles with minor adjustments */
-.services-item {
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    padding: 30px 25px;
-    transition: all 0.3s ease;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
+/* ENHANCED CAREERS FORM STYLING */
+
+.careers-wrapper {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    padding: 80px 0;
+}
+
+/* Intro Section */
+.intro-section {
+    margin-bottom: 80px;
+}
+
+.animated-image-container {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInLeft 0.8s ease forwards 0.3s;
+}
+
+.intro-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(21, 110, 104, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.intro-image:hover {
+    transform: scale(1.02);
+}
+
+.intro-content {
+    padding-left: 50px;
+}
+
+.animated-title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #156e68, #1a7a73);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.5s;
+}
+
+.animated-desc, .animated-desc-2 {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animated-desc {
+    animation: fadeInUp 0.8s ease forwards 0.7s;
+}
+
+.animated-desc-2 {
+    animation: fadeInUp 0.8s ease forwards 0.9s;
+}
+
+/* Enhanced Application Form */
+.application-section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards 1.1s;
+}
+
+.application-form {
+    background: white;
+    padding: 0;
+    border-radius: 25px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
     position: relative;
     overflow: hidden;
-    height: 100%; /* Ensure cards try to be equal height */
 }
-.services-item:hover {
-    border-color: #156e68;
-    box-shadow: 0 10px 30px rgba(21,110,104,0.15);
-    transform: translateY(-5px);
-}
-.services-item::before {
+
+.application-form::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(135deg, #156e68, #aec944);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    height: 6px;
+    background: linear-gradient(90deg, #156e68, #aec944, #156e68);
 }
-.services-item:hover::before {
-    transform: scaleX(1);
-}
-.services-icon-wrapper {
-    width: 100%;
-    height: 180px;
-    margin-bottom: 25px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    border: 2px solid #e8e8e8;
-    transition: all 0.3s ease;
-    display: flex; /* Use flexbox for centering */
-    justify-content: center;
-    align-items: center;
-}
-.services-item:hover .services-icon-wrapper {
-    border-color: #156e68;
-    background: linear-gradient(135deg, #156e68, #aec944);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(21,110,104,0.15);
-}
-.services-icon {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-.sector-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: all 0.3s ease;
-    filter: brightness(0.9);
-}
-.services-item:hover .sector-icon {
-    transform: scale(1.05);
-    filter: brightness(1);
-}
-.services-content {
+
+/* Form Header */
+.form-header {
     text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    padding: 50px 50px 30px;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
 }
-.services-content.text-left {
-    text-align: left;
-}
-.services-content.text-left ul {
-    flex-grow: 1; /* Push the ul to grow and fill space */
-}
-.services-content .title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.3;
-    transition: color 0.3s ease;
-}
-.services-item:hover .services-content .title {
+
+.form-title {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #156e68;
+    margin-bottom: 10px;
 }
-.services-content .desc {
-    font-size: 14px;
-    line-height: 1.6;
+
+.form-subtitle {
     color: #666;
+    font-size: 1.1rem;
     margin: 0;
 }
-.services-content ul {
-    text-align: left;
-    color: #666;
-    font-size: 13px;
-}
-.services-content ul li {
-    margin-bottom: 5px;
-}
-/* Responsive Design */
-@media (max-width: 1199px) {
-    .services-item {
-        padding: 25px 20px;
-    }
-    .services-icon-wrapper {
-        height: 160px;
-    }
-    .services-content .title {
-        font-size: 17px;
-    }
-}
-@media (max-width: 991px) {
-    .col-lg-4, .col-lg-6, .col-lg-3 {
-        margin-bottom: 30px;
-    }
-    .services-item {
-        padding: 20px 18px;
-    }
-    .services-icon-wrapper {
-        height: 150px;
-    }
-    .services-content .title {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-    .services-content .desc {
-        font-size: 13px;
-    }
-}
-@media (max-width: 767px) {
-    .services-item {
-        padding: 25px 20px;
-        margin-bottom: 20px;
-    }
-    .services-icon-wrapper {
-        height: 160px;
-        margin-bottom: 20px;
-    }
-    .services-content .title {
-        font-size: 17px;
-        margin-bottom: 15px;
-    }
-    .services-content .desc {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-}
-/* Enhanced section styling */
-.sec-title .sub-title {
-    color: #156e68;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-}
-.sec-title .title {
-    color: #333;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-.sec-title .desc {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
-/* Equal height for all cards - SCOPED TO SERVICES SECTION ONLY */
-.rs-services .row, .rs-about .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-.h-100 {
-    height: 100%;
-}
-@media (min-width: 992px) {
-    .rs-services .row > [class*="col-"], .rs-about .row > [class*="col-"] {
-        display: flex;
-    }
-}
-/* Specific banner adjustment if needed */
-.rs-breadcrumbs.img1 {
-    background-size: cover !important;
-    background-position: center !important;
-}
 
-/* Process Step Indicators */
-.process-step-indicator {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #156e68, #aec944);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Benefits Section - Improved Alignment */
-.rs-services.style2.gray-color .services-item {
-    align-items: center; /* Align items to center */
-    text-align: center; /* Center text */
-}
-.rs-services.style2.gray-color .services-item .services-content {
-    text-align: center; /* Center content */
-    align-items: center; /* Align content items to center */
-}
-.rs-services.style2.gray-color .services-item .services-content .title,
-.rs-services.style2.gray-color .services-item .services-content .desc {
-    text-align: center; /* Ensure title and desc are centered */
-}
-
-/* Benefits Section - Icon Styling */
-.benefit-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px; /* Set a fixed height for consistency */
-    margin-bottom: 20px;
-    padding: 15px;
-}
-
-.css-icon {
+/* Form Sections */
+.form-section {
+    padding: 40px 50px;
+    border-bottom: 1px solid #f0f0f0;
     position: relative;
-    width: 60px;
-    height: 60px;
 }
 
-/* --- Compliance Icon --- */
-.css-icon.compliance {
-    width: 50px;
-    height: 60px;
-}
-
-.compliance .shield {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 45px;
-    background: #156e68;
-    clip-path: polygon(50% 0%, 0% 20%, 0% 80%, 50% 100%, 100% 80%, 100% 20%);
-    border: 2px solid #aec944;
-}
-
-.compliance .check {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 18px;
-    height: 9px;
-    border-bottom: 3px solid #aec944;
-    border-left: 3px solid #aec944;
-    transform: translateX(-50%) rotate(-45deg);
-}
-
-/* --- Timely Icon --- */
-.css-icon.timely {
-    width: 60px;
-    height: 60px;
-}
-
-.timely .clock-face {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #156e68;
-    border-radius: 50%;
-    background: #f0f8f7;
-    box-sizing: border-box;
-}
-
-.timely .hour-hand {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 3px;
-    height: 15px;
-    background: #156e68;
-    transform-origin: top center;
-    transform: translate(-50%, -100%) rotate(90deg);
-    border-radius: 1.5px;
-}
-
-.timely .minute-hand {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 20px;
-    background: #aec944;
-    transform-origin: top center;
-    transform: translate(-50%, -100%) rotate(30deg);
-    border-radius: 1px;
-}
-
-.timely .clock-gear {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    background: #156e68;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* --- Risk Icon --- */
-.css-icon.risk {
-    width: 50px;
-    height: 60px;
-}
-
-.risk .risk-shield {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 45px;
-}
-
-.risk-shield .shield-base {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #156e68;
-    clip-path: polygon(50% 0%, 0% 20%, 0% 80%, 50% 100%, 100% 80%, 100% 20%);
-    border: 2px solid #aec944;
-}
-
-.risk-shield .shield-cross {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: #ff4d4d;
-    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-    transform: translate(-50%, -50%);
-}
-
-.risk .risk-barrier {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 4px;
-    background: #156e68;
-    border-radius: 2px;
-}
-
-/* --- Expert Icon --- */
-.css-icon.expert {
-    width: 40px;
-    height: 60px;
-}
-
-.expert .person-head {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    background: #156e68;
-    border-radius: 50%;
-    border: 2px solid #aec944;
-}
-
-.expert .person-body {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 20px;
-    background: #156e68;
-    border-radius: 50% 50% 0 0;
-    border: 2px solid #aec944;
+.form-section:last-child {
     border-bottom: none;
 }
 
-.expert .tie-knot {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background: #aec944;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
-.expert .briefcase {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 12px;
-    background: #156e68;
-    border: 2px solid #aec944;
-    border-radius: 2px;
+.section-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #156e68, #1a7a73);
+    color: white;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 15px;
 }
 
-.briefcase .briefcase-handle {
-    position: absolute;
-    top: -4px;
-    left: 3px;
-    right: 3px;
-    height: 4px;
-    border-top: 2px solid #aec944;
-    border-left: 2px solid #aec944;
-    border-right: 2px solid #aec944;
-    border-radius: 3px 3px 0 0;
+/* Enhanced Form Fields */
+.form-group {
+    position: relative;
 }
 
-/* Application Form Styling */
-.rs-requset {
-    background: #fff;
-    padding: 40px;
+.form-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.label-text {
+    margin-right: 5px;
+}
+
+.required {
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e9ecef;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+    position: relative;
 }
+
+.form-control:focus {
+    border-color: #156e68;
+    box-shadow: 0 0 0 0.25rem rgba(21, 110, 104, 0.15);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.form-control:hover {
+    border-color: #c6d2cf;
+}
+
+/* Character Counter */
+.character-count {
+    text-align: right;
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* File Upload Enhancement */
+.file-upload-wrapper {
+    position: relative;
+}
+
+.file-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.file-upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+}
+
+.file-upload-area:hover {
+    border-color: #156e68;
+    background: #f0f8f7;
+}
+
+.file-upload-area.dragover {
+    border-color: #156e68;
+    background: #e8f5f3;
+    transform: scale(1.02);
+}
+
+.upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.upload-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.upload-main {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.upload-sub {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.file-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #e8f5f3;
+    border: 2px solid #156e68;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-weight: 600;
+    color: #156e68;
+}
+
+.file-size {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.remove-file {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Error Messages */
+.error-text {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    display: block;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Success Alert Enhancement */
+.alert-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.alert-icon {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.alert-content {
+    flex-grow: 1;
+}
+
+.alert-content strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* Enhanced Submit Button */
+.submit-section {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    text-align: center;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #156e68, #1a7a73);
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 25px rgba(21, 110, 104, 0.3);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #1a7a73, #156e68);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(21, 110, 104, 0.4);
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+.loading .loading-spinner {
+    display: block;
+}
+
+.loading .btn-text,
+.loading .btn-icon {
+    display: none;
+}
+
+.submit-note {
+    margin-top: 15px;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Animation Keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .intro-content {
+        padding-left: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+    .animated-title {
+        font-size: 2.5rem;
+    }
+    
+    .form-header,
+    .form-section {
+        padding: 30px 25px;
+    }
+}
+
 @media (max-width: 767px) {
-    .rs-requset {
-        padding: 30px 20px;
+    .careers-wrapper {
+        padding: 40px 0;
+    }
+    
+    .intro-section {
+        margin-bottom: 50px;
+    }
+    
+    .animated-title {
+        font-size: 2rem;
+    }
+    
+    .form-header,
+    .form-section {
+        padding: 25px 20px;
+    }
+    
+    .form-title {
+        font-size: 2rem;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .alert-success {
+        margin: 20px;
     }
 }
 </style>
+
+<script>
+// Enhanced Form Validation
+function validateCareerForm() {
+    let isValid = true;
+    
+    // Clear previous errors
+    document.querySelectorAll('.error-text').forEach(error => error.textContent = '');
+    
+    // Name validation
+    const name = document.getElementById('name').value.trim();
+    if (!name) {
+        document.getElementById('error-name').textContent = 'Full name is required';
+        isValid = false;
+    } else if (name.length < 2) {
+        document.getElementById('error-name').textContent = 'Name must be at least 2 characters';
+        isValid = false;
+    }
+    
+    // Email validation
+    const email = document.getElementById('email').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+        document.getElementById('error-email').textContent = 'Email address is required';
+        isValid = false;
+    } else if (!emailRegex.test(email)) {
+        document.getElementById('error-email').textContent = 'Please enter a valid email address';
+        isValid = false;
+    }
+    
+    // Phone validation
+    const phone = document.getElementById('phone').value.trim();
+    if (!phone) {
+        document.getElementById('error-phone').textContent = 'Phone number is required';
+        isValid = false;
+    } else if (!/^\d{10}$/.test(phone)) {
+        document.getElementById('error-phone').textContent = 'Phone number must be exactly 10 digits';
+        isValid = false;
+    }
+    
+    // Resume validation
+    const resume = document.getElementById('resume').files[0];
+    if (!resume) {
+        document.getElementById('error-resume').textContent = 'Resume is required';
+        isValid = false;
+    } else {
+        if (resume.size > 5 * 1024 * 1024) {
+            document.getElementById('error-resume').textContent = 'Resume size must be under 5MB';
+            isValid = false;
+        }
+        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        if (!allowedTypes.includes(resume.type)) {
+            document.getElementById('error-resume').textContent = 'Please upload a PDF, DOC, or DOCX file';
+            isValid = false;
+        }
+    }
+    
+    return isValid;
+}
+
+// Enhanced Form Submission
+function submitCareerForm(event) {
+    event.preventDefault();
+    
+    if (!validateCareerForm()) {
+        // Scroll to first error
+        const firstError = document.querySelector('.error-text:not(:empty)');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+    }
+    
+    // Show loading state
+    const submitBtn = document.querySelector('.submit-btn');
+    submitBtn.classList.add('loading');
+    
+    // Get form data
+    const form = document.getElementById('career-form');
+    const formData = new FormData(form);
+    
+    // AJAX submission
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        submitBtn.classList.remove('loading');
+        
+        if (data.status === 'success') {
+            document.getElementById('success-alert').style.display = 'flex';
+            form.reset();
+            document.getElementById('file-selected').style.display = 'none';
+            document.getElementById('file-upload-area').style.display = 'block';
+            updateCharCount();
+            
+            // Scroll to success message
+            document.getElementById('success-alert').scrollIntoView({ behavior: 'smooth' });
+            
+            // Hide success message after 10 seconds
+            setTimeout(() => {
+                document.getElementById('success-alert').style.display = 'none';
+            }, 10000);
+        } else {
+            alert('There was an error submitting your application. Please try again.');
+        }
+    })
+    .catch(error => {
+        submitBtn.classList.remove('loading');
+        console.error('Error:', error);
+        alert('There was an error submitting your application. Please try again.');
+    });
+}
+
+// File Upload Enhancement
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('resume');
+    const fileUploadArea = document.getElementById('file-upload-area');
+    const fileSelected = document.getElementById('file-selected');
+    const fileName = document.getElementById('file-name');
+    const fileSize = document.getElementById('file-size');
+    const removeFile = document.getElementById('remove-file');
+    
+    // Click to upload
+    fileUploadArea.addEventListener('click', () => fileInput.click());
+    
+    // Drag and drop
+    fileUploadArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        fileUploadArea.classList.add('dragover');
+    });
+    
+    fileUploadArea.addEventListener('dragleave', () => {
+        fileUploadArea.classList.remove('dragover');
+    });
+    
+    fileUploadArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        fileUploadArea.classList.remove('dragover');
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            fileInput.files = files;
+            handleFileSelect(files[0]);
+        }
+    });
+    
+    // File selection
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files.length > 0) {
+            handleFileSelect(e.target.files[0]);
+        }
+    });
+    
+    // Remove file
+    removeFile.addEventListener('click', () => {
+        fileInput.value = '';
+        fileSelected.style.display = 'none';
+        fileUploadArea.style.display = 'block';
+    });
+    
+    function handleFileSelect(file) {
+        fileName.textContent = file.name;
+        fileSize.textContent = formatFileSize(file.size);
+        fileSelected.style.display = 'flex';
+        fileUploadArea.style.display = 'none';
+    }
+    
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    }
+});
+
+// Character Counter
+function updateCharCount() {
+    const textarea = document.getElementById('message');
+    const charCount = document.getElementById('char-count');
+    const currentLength = textarea.value.length;
+    charCount.textContent = currentLength;
+    
+    if (currentLength > 900) {
+        charCount.style.color = '#e74c3c';
+    } else if (currentLength > 700) {
+        charCount.style.color = '#f39c12';
+    } else {
+        charCount.style.color = '#6c757d';
+    }
+}
+
+document.getElementById('message').addEventListener('input', updateCharCount);
+
+// Phone number formatting
+document.getElementById('phone').addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '').slice(0, 10);
+});
+
+// Initialize character count
+updateCharCount();
+</script>
+
 @endsection

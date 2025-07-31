@@ -46,6 +46,8 @@ Route::post('/contact-us-save', [FrontendController::class, 'contactussave'])->n
 
 // About Us Pages
 Route::get('/about-us/{slug}', [FrontendController::class, 'aboutus'])->name('about-us');
+// Approvals Us Pages
+Route::get('/approvals', [FrontendController::class, 'approvals'])->name('approvals');
 
 // Service Pages
 Route::get('/service/{slug}', [FrontendController::class, 'services'])->name('service');

@@ -265,6 +265,7 @@
     line-height: 1.6;
     color: #555;
     flex-grow: 1;
+    text-align: justify; /* 👈 Added this line */
 }
 
 /* Mission and Values lists */
