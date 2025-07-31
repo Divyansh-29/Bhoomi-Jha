@@ -8,7 +8,7 @@
         <div class="intro-section">
             <div class="row align-items-center">
                 <div class="col-lg-6 animated-image-container">
-                    <img src="{{asset('assets/images/career-intro-img.webp')}}" alt="Careers at {{ env('SITENAME') }}" class="intro-image">
+                    <img src="{{asset('assets/images/office.jpg')}}" alt="Careers at {{ env('SITENAME') }}" class="intro-image">
                 </div>
                 <div class="col-lg-6">
                     <div class="intro-content">
