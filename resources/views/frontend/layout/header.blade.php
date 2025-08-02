@@ -244,6 +244,7 @@
     /* Mobile Adjustments */
     .mobile-name .company-name {
         font-size: 16px;
+        margin-top: 1em;
     }
 
     .mobile-name .company-tagline {
@@ -313,6 +314,7 @@
         
         .logo-image {
             width: 45px !important;
+            margin-top: 0.5em;
         }
     }
 

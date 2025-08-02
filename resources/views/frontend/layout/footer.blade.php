@@ -477,7 +477,7 @@
                         </li>
                         <li>
                             <img src="{{asset('assets/images/icons/email.png')}}" alt="Email" class="custom-icon">
-                            <span><a href="mailto:bd@bhoomijha.com">bd@bhoomijha.com</a></span>
+                            <span><a href="mailto:bd@bhoomijaenvirocare.com">bd@bhoomijaenvirocare.com</a></span>
                         </li>
                     </ul>
                 </div>
@@ -513,7 +513,7 @@
             <div class="row y-middle">
                 <div class="col-lg-12">
                     <div class="copyright text-center">
-                        <p>&copy; 2025 Bhoomija Environmental Consultancy. All Rights Reserved. | Designed with ❤️ for Sustainability</p>
+                        <p>&copy; {{ \Carbon\Carbon::now()->format('Y') }} Bhoomija Envirocare Private Limited. All Rights Reserved. | Designed with ❤️ for Sustainability</p>
                     </div>
                 </div>
             </div>

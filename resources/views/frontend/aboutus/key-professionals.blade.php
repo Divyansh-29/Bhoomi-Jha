@@ -34,7 +34,7 @@
                 <div class="team-member-card">
                     <div class="team-member-inner">
                         <div class="team-img-wrapper">
-                            <img src="{{ asset('assets/images/team/Ashish-gupta.jpg') }}" alt="Mr. Ashish Kumar Gupta">
+                            <img src="{{ asset('assets/images/team/Ashish-Gupta.jpg') }}" alt="Mr. Ashish Kumar Gupta">
                         </div>
                         <div class="team-content-wrapper">
                             <h3 class="team-name">Mr. Ashish Kumar Gupta</h3>
@@ -208,6 +208,9 @@
                 <!-- Mr. Mukesh Kumar Singh -->
                 <div class="team-member-card">
                     <div class="team-member-inner">
+                         <div class="team-img-wrapper">
+                            <img src="{{ asset('assets/images/team/Mukesh-Kumar.jpg') }}" alt="Mr. Naresh Kumar Nishad">
+                        </div>
                         <div class="team-content-wrapper full-width-content">
                             <h3 class="team-name">Mr. Mukesh Kumar Singh</h3>
                             <h4 class="team-title">Process Engineering Expert</h4>
