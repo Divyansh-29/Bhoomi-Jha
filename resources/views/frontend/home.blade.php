@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <!-- Navigation with SVG Icons -->
+        <!-- Navigation with SVG Icons (Desktop/Tablet) -->
         <div class="carousel-nav">
             <button class="nav-btn prev-btn" onclick="changeSlide(-1)">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,6 +90,20 @@
             </button>
             <button class="nav-btn next-btn" onclick="changeSlide(1)">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Bottom Navigation (only visible on mobile) -->
+        <div class="carousel-nav-mobile">
+            <button class="nav-btn-mobile prev-btn-mobile" onclick="changeSlide(-1)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="nav-btn-mobile next-btn-mobile" onclick="changeSlide(1)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
@@ -189,7 +203,6 @@
         backdrop-filter: blur(10px);
     }
 
-    /* REDUCED FONT SIZES */
     .hero-title {
         font-size: 2.2rem;
         font-weight: 700;
@@ -276,7 +289,6 @@
         outline: none;
     }
 
-    /* SVG Icon Styling */
     .nav-btn svg {
         width: 16px;
         height: 16px;
@@ -295,6 +307,57 @@
     }
 
     .nav-btn:focus {
+        outline: 2px solid #2ecc71;
+        outline-offset: 2px;
+    }
+
+    /* Mobile Bottom Navigation - Updated for corner positioning */
+    .carousel-nav-mobile {
+        display: none;
+        position: absolute;
+        bottom: 60px; /* Position above indicators */
+        left: 0;
+        right: 0;
+        width: 100%;
+        justify-content: space-between; /* This spreads them to corners */
+        padding: 0 20px; /* Add padding from screen edges */
+        z-index: 3;
+    }
+
+    .nav-btn-mobile {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        outline: none;
+    }
+
+    .nav-btn-mobile svg {
+        width: 14px;
+        height: 14px;
+        color: inherit;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-btn-mobile:hover {
+        background: rgba(46, 204, 113, 0.3);
+        border-color: #2ecc71;
+        transform: scale(1.05);
+    }
+
+    .nav-btn-mobile:hover svg {
+        transform: scale(1.1);
+    }
+
+    .nav-btn-mobile:focus {
         outline: 2px solid #2ecc71;
         outline-offset: 2px;
     }
@@ -359,12 +422,12 @@
         color: inherit;
     }
 
-    /* FIXED: Service cards - no white blocks, flexible heights */
+    /* Service cards styles */
     .rs-number.flip-card {
         height: auto;
-        margin-bottom: 0; /* Remove bottom margin that was creating white space */
-        border: none; /* Remove any borders */
-        padding: 0; /* Remove padding */
+        margin-bottom: 0;
+        border: none;
+        padding: 0;
     }
 
     .rs-number-text.flip-card-inner {
@@ -393,7 +456,6 @@
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
-    /* Image stretches to fit card height naturally */
     .rs-number-area.flip-card-front img {
         width: 100%;
         height: auto;
@@ -406,14 +468,13 @@
         border: none;
         margin: 0;
         padding: 0;
-        display: block; /* Ensures proper display */
+        display: block;
     }
 
     .flip-card:hover .rs-number-area.flip-card-front img {
         transform: scale(1.05);
     }
 
-    /* Service text area */
     .services-text {
         flex-grow: 1;
         display: flex;
@@ -444,13 +505,12 @@
         color: #2ecc71;
     }
 
-    /* Fix for any potential container issues */
     .rs-services .row {
         margin: 0;
     }
 
     .rs-services .col-lg-3 {
-        padding: 0 12px 25px 12px; /* Only side padding, no bottom margin on container */
+        padding: 0 12px 25px 12px;
     }
 
     /* Animations */
@@ -497,45 +557,63 @@
         }
     }
 
+    /* MOBILE RESPONSIVE - Updated for smaller banner height */
     @media (max-width: 768px) {
         .modern-hero-carousel {
-            height: 100vh;
-            min-height: 500px;
+            height: 60vh; /* Reduced from 100vh */
+            min-height: 400px; /* Reduced from 500px */
+            max-height: 500px; /* Added max-height for mobile */
+        }
+        
+        /* Hide the side navigation buttons on mobile */
+        .carousel-nav {
+            display: none; /* This will hide the side buttons */
+        }
+        
+        /* Show mobile navigation on mobile devices */
+        .carousel-nav-mobile {
+            display: flex; /* Show on mobile */
+        }
+        
+        /* Adjust indicators position to make room for mobile nav */
+        .carousel-indicators {
+            bottom: 15px; /* Move indicators down a bit */
         }
         
         .content-wrapper {
             max-width: 100%;
+            padding: 0 10px; /* Added padding for better spacing */
+        }
+        
+        .hero-badge {
+            font-size: 10px;
+            padding: 4px 12px;
+            margin-bottom: 15px; /* Reduced margin */
         }
         
         .hero-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem; /* Slightly reduced */
+            margin-bottom: 20px; /* Reduced margin */
         }
         
         .title-line {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            margin-bottom: 6px; /* Reduced margin */
         }
         
         .title-highlight {
             font-size: 1rem;
+            margin-top: 8px; /* Reduced margin */
+            line-height: 1.2; /* Tighter line height */
+        }
+        
+        .hero-actions {
+            margin-top: 20px; /* Reduced margin */
         }
         
         .btn-primary {
             padding: 12px 24px;
             font-size: 12px;
-        }
-        
-        .carousel-nav {
-            padding: 0 20px;
-        }
-        
-        .nav-btn {
-            width: 50px;
-            height: 50px;
-        }
-        
-        .nav-btn svg {
-            width: 14px;
-            height: 14px;
         }
         
         .scroll-indicator {
@@ -554,30 +632,73 @@
 
     @media (max-width: 480px) {
         .modern-hero-carousel {
-            min-height: 450px;
+            height: 50vh; /* Even smaller for very small phones */
+            min-height: 350px; /* Reduced minimum height */
+            max-height: 400px; /* Smaller max height */
+        }
+        
+        .carousel-nav-mobile {
+            bottom: 50px; /* Adjust position for smaller screens */
+            padding: 0 15px; /* Adjust padding for smaller screens */
+        }
+        
+        .nav-btn-mobile {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .nav-btn-mobile svg {
+            width: 12px;
+            height: 12px;
+        }
+        
+        .carousel-indicators {
+            bottom: 10px;
+        }
+        
+        .hero-content {
+            padding: 0 10px; /* Add padding */
+        }
+        
+        .content-wrapper {
+            padding: 0 5px;
         }
         
         .hero-badge {
-            font-size: 10px;
-            padding: 5px 12px;
+            font-size: 9px;
+            padding: 3px 10px;
+            margin-bottom: 12px;
         }
         
         .hero-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem; /* Further reduced */
             margin-bottom: 15px;
         }
         
         .title-line {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
         
         .title-highlight {
             font-size: 0.9rem;
+            margin-top: 6px;
+            line-height: 1.1;
+        }
+        
+        .hero-actions {
+            margin-top: 15px;
         }
         
         .btn-primary {
             font-size: 11px;
             padding: 10px 20px;
+        }
+        
+        /* Adjust indicators */
+        .indicator {
+            width: 10px;
+            height: 10px;
         }
 
         .rs-number-area.flip-card-front img {
@@ -592,6 +713,47 @@
         
         .services-text .ser-title {
             font-size: 14px;
+        }
+    }
+
+    /* Add a new media query for very small screens */
+    @media (max-width: 320px) {
+        .modern-hero-carousel {
+            height: 45vh;
+            min-height: 300px;
+            max-height: 350px;
+        }
+        
+        .carousel-nav-mobile {
+            bottom: 45px;
+            padding: 0 10px; /* Adjust padding for very small screens */
+        }
+        
+        .nav-btn-mobile {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .nav-btn-mobile svg {
+            width: 10px;
+            height: 10px;
+        }
+        
+        .hero-title {
+            font-size: 1.1rem;
+        }
+        
+        .title-line {
+            font-size: 1rem;
+        }
+        
+        .title-highlight {
+            font-size: 0.8rem;
+        }
+        
+        .btn-primary {
+            font-size: 10px;
+            padding: 8px 16px;
         }
     }
     </style>
@@ -718,221 +880,6 @@
         </div>
     </div>
     <!-- About Section End -->
-
-    <!-- Services Section Start -->
-    {{-- <div class="rs-services main-home style3 bg13 pt-120 pb-120 md-pt-80 md-pb-80" id="services">
-        <div class="container pt-relative">
-            <div class="sec-title">
-                <h2 class="title wow fadeInDown pb-20">Our Services</h2>
-                <div class="desc pb-30">Our services cover a large spectrum, starting from helping you prepare and get consents and environmental clearances from various state and centre level bodies to
-                    conducting periodic audits as mandated in the clearances to helping you get Green Building
-                    Certifications.</div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/environmental-impacts.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','environmental-clearence') }}">Environmental Impacts Assessment (EIA) Studies</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Environmental Impacts Assessment (EIA) Studies
-                                </h4>
-                                <div class="desc pb-10 text-dark">Essential assessment for new or modified projects to evaluate potential environmental impacts.<br>
-                                    <p><a href="{{ route('service','environmental-impacts-assessment') }}"
-                                            style="font-weight:800;color:#000;">Read more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/environmental-monitoring.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','ground-water-clearence') }}">Environmental Monitoring</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Environmental Monitoring
-                                </h4>
-                                <div class="desc pb-10 text-dark">Monitoring environmental parameters, including groundwater usage, to ensure compliance and sustainability.<br>
-                                    <p><a href="{{ route('service','environmental-monitoring') }}"
-                                            style="font-weight:800;color:#000;">Read more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/environmental-audits.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','consent-to-establish-and-operate') }}">Environmental Audits</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Environmental Audits
-                                </h4>
-                                <div class="desc pb-10 text-dark">Comprehensive audits to assess environmental compliance during project construction and operation phases.<br>
-                                    <p><a href="{{ route('service','environmental-audits') }}"
-                                            style="font-weight:800;color:#000;">Read more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/fc-wc.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','periodic-compliance-audits') }}">Forest Clearance (FC), Wildlife Clearance (WC)</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Forest Clearance (FC), Wildlife Clearance (WC)
-                                </h4>
-                                <div class="desc pb-10 text-dark">Navigating complex clearances for projects impacting forest or wildlife areas with expert guidance.<br>
-                                    <p><a href="{{ route('service','fc-wc') }}" style="font-weight:800;color:#000;">Read
-                                            more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/consent-to-establish.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','green-building-cetification') }}">Consent to Estalish and Operate (SPBs)</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Consent to Estalish and Operate (SPBs)
-                                </h4>
-                                <div class="desc pb-10 text-dark">Securing necessary consents for establishing and operating Small Pollution Control Boards (SPBs).<br>
-                                    <p><a href="{{ route('service','consent-to-estalish-and-operate') }}" style="font-weight:800;color:#000;">Read
-                                            more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                    
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/six-monthly.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','design-services') }}">Six Monthly Compliance Report Preparation For EC Conditions</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Six Monthly Compliance Report Preparation For EC Conditions
-                                </h4>
-                                <div class="desc pb-10 text-dark">Preparing mandatory six-monthly reports demonstrating adherence to Environmental Clearance (EC) conditions.<br>
-                                    <p><a href="{{ route('service','six-monthly-compliance-report-preparation-for-ec-conditions') }}" style="font-weight:800;color:#000;">Read
-                                            more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/carbon-footprints.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','operations-and-maintenance') }}">Carbon Foot Print & Climate Change Studies</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Carbon Foot Print & Climate Change Studies
-                                </h4>
-                                <div class="desc pb-10 text-dark">Analyzing your project's carbon footprint and potential climate change impacts for informed decisions.<br>
-                                    <p><a href="{{ route('service','carbon-foot-print-&-climate-change-studies') }}"
-                                            style="font-weight:800;color:#000;">Read more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/socio.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','periodic-compliance-audits') }}">Socio-Economic Impact Assessment</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Socio-Economic Impact Assessment
-                                </h4>
-                                <div class="desc pb-10 text-dark">Evaluating the potential social and economic effects of projects on local communities and regions.<br>
-                                    <p><a href="{{ route('service','socio-economic-impact-assessment') }}" style="font-weight:800;color:#000;">Read
-                                            more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/stp.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','green-building-cetification') }}">Design & Engineering for Tech MBBR, SBR, ASP, MBR, etc (STP, ETP & CPU etc)</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Design & Engineering for Tech MBBR, SBR, ASP, MBR, etc (STP, ETP & CPU etc)
-                                </h4>
-                                <div class="desc pb-10 text-dark">Expert design and engineering for advanced wastewater treatment technologies like MBBR, SBR, ASP, MBR.<br>
-                                    <p><a href="{{ route('service','design-&-engineering-for-tech') }}" style="font-weight:800;color:#000;">Read
-                                            more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                    
-                <div class="col-lg-3 col-md-6 mb-25">
-                    <div class="rs-number flip-card">
-                        <div class="rs-number-text flip-card-inner">
-                            <div class="rs-number-area flip-card-front">
-                                <img src="{{asset('assets/images/service/annual-statement.jpg')}}" alt="">
-                                <div class="services-text">
-                                    <h3 class="ser-title"><a href="{{ route('service','design-services') }}">Annual Environmental Statement (Form-V)</a></h3>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <h4 class="ser-title mb-1">Annual Environmental Statement (Form-V)
-                                </h4>
-                                <div class="desc pb-10 text-dark">Preparing the mandatory Annual Environmental Statement (Form-V) for regulatory compliance reporting.<br>
-                                    <p><a href="{{ route('service','annual-environmental-statement') }}" style="font-weight:800;color:#000;">Read
-                                            more>></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Services Section End -->
 
     <!-- Contact Section -->
     <div class="rs-call-us bg1 pt-120 pb-100 md-pt-80"
