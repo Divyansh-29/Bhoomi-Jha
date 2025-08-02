@@ -539,7 +539,7 @@
                         <div class="address-box">
                             <div class="address-text">
                                 <span class="label">✉️ Email</span>
-                                <a href="mailto:bd@bhoomija.com">bd@bhoomija.com</a>
+                                <a href="mailto:bd@bhoomijaenvirocare.com">bd@bhoomijaenvirocare.com</a>
                             </div>
                         </div>
                         
